@@ -1,8 +1,12 @@
 class Game
 
-  def initialize(number_of_players=3, use_tides_of_battle_cards=false)
+  def initialize(number_of_players=6, use_tides_of_battle_cards=false)
     # TODO
     # GameSetupService.new(number_of_players, use_tides_of_battle_cards).start
+  end
+
+  def id
+    # TODO
   end
 
   def world
