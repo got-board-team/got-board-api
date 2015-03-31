@@ -1,0 +1,2 @@
+class PowerPool
+end

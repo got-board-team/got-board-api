@@ -1,0 +1,2 @@
+class InfluenceToken < Token
+end

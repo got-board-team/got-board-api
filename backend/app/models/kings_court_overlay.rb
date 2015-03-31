@@ -1,0 +1,2 @@
+class KingsCourtOverlay
+end

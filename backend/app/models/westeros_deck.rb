@@ -1,0 +1,2 @@
+class WesterosDeck < Deck
+end

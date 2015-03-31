@@ -1,0 +1,2 @@
+class Sea < MapArea
+end

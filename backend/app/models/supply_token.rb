@@ -1,0 +1,2 @@
+class SupplyToken < Token
+end

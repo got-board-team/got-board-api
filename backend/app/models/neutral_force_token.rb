@@ -1,0 +1,2 @@
+class NeutralForceToken < Token
+end

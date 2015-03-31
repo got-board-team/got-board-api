@@ -1,0 +1,2 @@
+class GameRoundMarker < Token
+end

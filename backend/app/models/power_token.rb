@@ -1,0 +1,2 @@
+class PowerToken < Token
+end

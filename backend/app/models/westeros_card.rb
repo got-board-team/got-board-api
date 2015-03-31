@@ -1,0 +1,2 @@
+class WesterosCard < Card
+end
