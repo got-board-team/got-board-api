@@ -1,0 +1,2 @@
+class ValyrianSteelBladeToken < Token
+end

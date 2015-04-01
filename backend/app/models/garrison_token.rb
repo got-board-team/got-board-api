@@ -1,0 +1,2 @@
+class GarrisonToken < Token
+end

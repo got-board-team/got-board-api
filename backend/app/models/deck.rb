@@ -1,0 +1,2 @@
+class Deck
+end

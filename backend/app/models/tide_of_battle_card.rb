@@ -1,0 +1,2 @@
+class TideOfBattleCard < Card
+end

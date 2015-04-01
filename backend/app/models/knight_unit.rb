@@ -1,0 +1,2 @@
+class KnightUnit < Unit
+end

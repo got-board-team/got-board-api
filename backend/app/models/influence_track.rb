@@ -1,0 +1,2 @@
+class InfluenceTrack < Track
+end

@@ -1,0 +1,2 @@
+class WildlingTrack < Track
+end

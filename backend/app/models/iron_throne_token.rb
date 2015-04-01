@@ -1,0 +1,2 @@
+class IronThroneToken < Token
+end

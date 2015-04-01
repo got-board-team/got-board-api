@@ -1,0 +1,2 @@
+class Land < MapArea
+end

@@ -1,0 +1,2 @@
+class WesterosDeckTwo < WesterosDeck
+end

@@ -1,0 +1,2 @@
+class OrderToken < Token
+end

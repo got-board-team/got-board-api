@@ -1,0 +1,2 @@
+class ShipUnit < Unit
+end

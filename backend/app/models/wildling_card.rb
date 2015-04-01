@@ -1,0 +1,2 @@
+class WildlingCard < Card
+end
