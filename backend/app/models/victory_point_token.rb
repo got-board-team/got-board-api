@@ -1,0 +1,2 @@
+class VitoryPointToken < Token
+end

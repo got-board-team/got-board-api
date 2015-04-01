@@ -1,0 +1,2 @@
+class RoundTrack < Track
+end

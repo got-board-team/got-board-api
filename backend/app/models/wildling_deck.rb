@@ -1,0 +1,2 @@
+class WildlingDeck < Deck
+end

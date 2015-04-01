@@ -1,0 +1,2 @@
+class SupplyTrack < Track
+end
