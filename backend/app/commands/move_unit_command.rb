@@ -1,0 +1,2 @@
+class MoveUnitCommand < Command
+end

@@ -11,11 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150402002614) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "hstore"
   enable_extension "citext"
+
+  create_table "boards", force: :cascade do |t|
+    t.integer  "match_id",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "boards", ["match_id"], name: "index_boards_on_match_id", using: :btree
+
+  create_table "matches", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "players", force: :cascade do |t|
+    t.integer  "match_id",   null: false
+    t.string   "house",      null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "players", ["match_id", "house"], name: "index_players_on_match_id_and_house", unique: true, using: :btree
+  add_index "players", ["match_id"], name: "index_players_on_match_id", using: :btree
 
 end

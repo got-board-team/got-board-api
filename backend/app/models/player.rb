@@ -1,15 +1,12 @@
-class Player
+class Player < ActiveRecord::Base
 
-  def initialize(house, name=nil)
-    # TODO
-  end
+  HOUSES = %w( Baratheon Lannister Stark Greyjoy Tyrell Martell )
 
-  def name
-    # TODO
-  end
+  belongs_to :match
 
-  def house
-    # TODO
-  end
+  validates :match_id, presence: true
+  validates :house, presence: true,
+    inclusion: {in: HOUSES},
+    uniqueness: {scope: :match_id}
 
 end
