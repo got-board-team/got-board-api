@@ -20,14 +20,14 @@ class MatchSetupService
     def create_players(match, number_of_players)
       players = []
       # 3 players: Baratheon Lannister Stark
-      # 4 players: Baratheon Lannister Stark Greyjoy
-      # 5 players: Baratheon Lannister Stark Greyjoy Tyrell
-      # 6 players: Baratheon Lannister Stark Greyjoy Tyrell Martell
       players << Player.create!(match: match, house: 'Baratheon')
       players << Player.create!(match: match, house: 'Lannister')
       players << Player.create!(match: match, house: 'Stark')
+      # 4 players: Baratheon Lannister Stark Greyjoy
       players << Player.create!(match: match, house: 'Greyjoy') if number_of_players >= 4
+      # 5 players: Baratheon Lannister Stark Greyjoy Tyrell
       players << Player.create!(match: match, house: 'Tyrell')  if number_of_players >= 5
+      # 6 players: Baratheon Lannister Stark Greyjoy Tyrell Martell
       players << Player.create!(match: match, house: 'Martell') if number_of_players == 6
       players
     end
