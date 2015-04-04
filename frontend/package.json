@@ -1,7 +1,7 @@
 {
   "name": "got-board-game",
   "version": "0.0.0",
-  "description": "Small description for got-board-game goes here",
+  "description": "The Game of Thrones Board Game Online",
   "private": true,
   "directories": {
     "doc": "doc",
@@ -17,7 +17,7 @@
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Leandro Thimóteo, Rafael Tauil Wanderson Policarpo, Rodrigo Tassinari",
   "license": "MIT",
   "devDependencies": {
     "bower": "~1.4.1",
