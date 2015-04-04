@@ -12,7 +12,6 @@
     "ember-qunit": "0.3.0",
     "ember-qunit-notifications": "0.0.7",
     "qunit": "~1.17.1",
-    "d3": "~3.5.5",
-    "interact": "~1.2.4"
+    "d3": "~3.5.5"
   }
 }
