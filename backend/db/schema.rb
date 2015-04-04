@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150404202820) do
+ActiveRecord::Schema.define(version: 20150404205105) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,25 @@ ActiveRecord::Schema.define(version: 20150404202820) do
   end
 
   add_index "boards", ["match_id"], name: "index_boards_on_match_id", using: :btree
+
+  create_table "map_areas", force: :cascade do |t|
+    t.integer  "match_id",                       null: false
+    t.integer  "map_id",                         null: false
+    t.citext   "slug",                           null: false
+    t.string   "type",                           null: false
+    t.string   "fortification_type"
+    t.integer  "barrels_count",      default: 0, null: false
+    t.integer  "crowns_count",       default: 0, null: false
+    t.string   "house_sigil"
+    t.integer  "port_owner_id"
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+  end
+
+  add_index "map_areas", ["map_id", "slug"], name: "index_map_areas_on_map_id_and_slug", unique: true, using: :btree
+  add_index "map_areas", ["map_id"], name: "index_map_areas_on_map_id", using: :btree
+  add_index "map_areas", ["match_id"], name: "index_map_areas_on_match_id", using: :btree
+  add_index "map_areas", ["port_owner_id"], name: "index_map_areas_on_port_owner_id", using: :btree
 
   create_table "maps", force: :cascade do |t|
     t.integer  "match_id",                                null: false

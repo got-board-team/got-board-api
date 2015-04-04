@@ -1,0 +1,214 @@
+# TODO finish writing all map areas
+# TODO verify the names in portuguese
+map_areas:
+
+  - slug: bay_of_ice
+    type: Sea
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Bay of Ice
+      pt: Baía de Gelo
+
+  - slug: sunset_sear
+    type: Sea
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Senset Sea
+      pt: Mar do Poente
+
+  - slug: ironmans_bay
+    type: Sea
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Ironman's Bay
+      pt: Baía dos Homens de Ferro
+
+  - slug: golden_sound
+    type: Sea
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: The Golden Sound
+      pt: Canal Dourado
+
+  - slug: west_summer_sea
+    type: Sea
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: West Summer Sea
+      pt: Mar do Verão Oeste
+
+  - slug: redwyne_straights
+    type: Sea
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Redwyne Straights
+      pt: Estreito de Redwyne
+
+  - slug: east_summer_sea
+    type: Sea
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: East Summer Sea
+      pt: Mar do Verão Leste
+
+  - slug: sea_of_dorne
+    type: Sea
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Sea of Dorne
+      pt: Mar de Dorne
+
+  - slug: shipbreaker_bay
+    type: Sea
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Shipbreaker Bay
+      pt: Baía de Quebra de Navios
+
+  - slug: blackwater_bay
+    type: Sea
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Blackwater Bay
+      pt: Baía da Água Negra
+
+  - slug: narrow_sea
+    type: Sea
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: The Narrow Sea
+      pt: Mar Estreito
+
+  - slug: shivering_sea
+    type: Sea
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: The Shivering Sea
+      pt: Mar do Arrepio
+
+  - slug: castle_blank
+    type: Land
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: Castle Black
+      pt: Castelo Negro
+
+  - slug: Karhold
+    type: Land
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: Karhold
+      pt: Karhold
+
+  - slug: winterfell
+    type: Land
+    fortification_type: stronghold
+    barrels_count: 1
+    crowns_count: 1
+    house_sigil: Stark
+    names:
+      en: Winterfell
+      pt: Winterfell
+
+  - slug: port_of_winterfell
+    type: Port
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Port of Winterfell
+      pt: Porto de Winterfell
+
+  - slug: stony_shore
+    type: Land
+    fortification_type:
+    barrels_count: 1
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: The Stony Shore
+      pt: Litoral Rochoso
+
+  - slug: white_harbor
+    type: Land
+    fortification_type: castle
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: White Harbor
+      pt: Porto Branco
+
+  - slug: port_of_white_harbor
+    type: Port
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Port of White Harbor
+      pt: Porto de White Harbor
+
+  - slug: widows_watch
+    type: Land
+    fortification_type:
+    barrels_count: 1
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Whidow's Watch
+      pt: Patrulha da Viúva
+
+  # - slug:
+  #   type:
+  #   fortification_type:
+  #   barrels_count: 0
+  #   crowns_count: 0
+  #   house_sigil:
+  #   names:
+  #     en:
+  #     pt:
+
