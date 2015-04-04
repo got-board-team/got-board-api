@@ -26,7 +26,7 @@ export default Ember.Route.extend({
   activate: function() {
     $(document).ready(function () {
 
-      function dragStart(d) {
+      function dragStart() {
         window.dragging = true;
         d3.select(this).attr('pointer-events', 'none');
       }
@@ -34,12 +34,12 @@ export default Ember.Route.extend({
       function moveUnit(elm, dx, dy) {
         var x = parseFloat(d3.select(elm).attr("x"));
         var y = parseFloat(d3.select(elm).attr("y"));
-        x += dx
-        y += dy
+        x += dx;
+        y += dy;
         d3.select(elm).attr("x", x).attr("y", y);
       }
 
-      function dragmove(d) {
+      function dragmove() {
         var ev = d3.event;
         moveUnit(this, ev.dx, ev.dy);
       }
@@ -64,11 +64,11 @@ export default Ember.Route.extend({
 
       d3.selectAll(".f").call(drag);
 
-      d3.selectAll(".territory").on("mouseout", function(d){
+      d3.selectAll(".territory").on("mouseout", function(){
         d3.selectAll(".territory").classed("drop-actived", false);
       });
 
-      d3.selectAll(".territory").on("mouseover", function(d){
+      d3.selectAll(".territory").on("mouseover", function(){
         if (window.dragging) {
           d3.select(this).classed('drop-actived', true);
         }
