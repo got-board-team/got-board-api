@@ -2,6 +2,7 @@ class Match < ActiveRecord::Base
 
   has_many :players
   has_one :board
+  has_one :map
   # has_many :decks
   # has_one :wildlings_deck
   # has_one :westeros_one_deck

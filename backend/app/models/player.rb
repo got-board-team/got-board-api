@@ -46,7 +46,9 @@ class Player < ActiveRecord::Base
   # has_many :siege_engine_units,
   #   -> { where type: 'siege_engine' }, class_name: 'Unit'
 
+  # TODO spec
   validates :match_id, presence: true
+  # TODO spec
   validates :house, presence: true,
     inclusion: {in: HOUSES},
     uniqueness: {scope: :match_id}
