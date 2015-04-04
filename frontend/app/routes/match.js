@@ -32,8 +32,8 @@ export default Ember.Route.extend({
       }
 
       function moveUnit(elm, dx, dy) {
-        var x = parseFloat(d3.select(elm).attr("x"));
-        var y = parseFloat(d3.select(elm).attr("y"));
+        var x = parseFloat(d3.select(elm).attr("x")) || 0;
+        var y = parseFloat(d3.select(elm).attr("y") || 0);
         x += dx;
         y += dy;
         d3.select(elm).attr("x", x).attr("y", y);
@@ -62,7 +62,6 @@ export default Ember.Route.extend({
         on("dragend", dragEnd);
 
 
-      d3.selectAll(".f").call(drag);
 
       d3.selectAll(".territory").on("mouseout", function(){
         d3.selectAll(".territory").classed("drop-actived", false);
@@ -75,6 +74,8 @@ export default Ember.Route.extend({
         window.currentTerritory = this;
         console.log("over", this.parentNode.id);
       });
+
+      d3.selectAll(".piece").call(drag);
     });
   },
 });
