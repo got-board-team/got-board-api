@@ -1,4 +1,3 @@
-# TODO finish writing all map areas
 # TODO verify the names in portuguese
 map_areas:
 
@@ -202,13 +201,382 @@ map_areas:
       en: Whidow's Watch
       pt: Patrulha da Viúva
 
-  # - slug:
-  #   type:
-  #   fortification_type:
-  #   barrels_count: 0
-  #   crowns_count: 0
-  #   house_sigil:
-  #   names:
-  #     en:
-  #     pt:
+  - slug: flints_finger
+    type: Land
+    fortification_type: castle
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Flint's Finger
+      pt: O Dedo de Flint
 
+  - slug: greywater_watch
+    type: Land
+    fortification_type:
+    barrels_count: 1
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Greywater Watch
+      pt: Patrulha da Água Cinza
+
+  - slug: moat_cailin
+    type: Land
+    fortification_type: castle
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Moat Cailin
+      pt: Fosso Cailin
+
+  - slug: seagard
+    type: Land
+    fortification_type: stronghold
+    barrels_count: 1
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: Seagard
+      pt: Guardamar
+
+  - slug: pyke
+    type: Land
+    fortification_type: stronghold
+    barrels_count: 1
+    crowns_count: 1
+    house_sigil: Greyjoy
+    names:
+      en: Pyke
+      pt: Pyke
+
+  - slug: port_of_pyke
+    type: Port
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Port of Pyke
+      pt: Porto de Pyke
+
+  - slug: twins
+    type: Land
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: The Twins
+      pt: As Gêmeas
+
+  - slug: fingers
+    type: Land
+    fortification_type:
+    barrels_count: 1
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: The Fingers
+      pt: Os Dedos
+
+  - slug: mountains_of_moon
+    type: Land
+    fortification_type:
+    barrels_count: 1
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: The Mountains of the Moon
+      pt: As Montanhas da Lua
+
+  - slug: eyrie
+    type: Land
+    fortification_type: castle
+    barrels_count: 1
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: The Eyrie
+      pt: O Ninho da Águia
+
+  - slug: riverrun
+    type: Land
+    fortification_type: stronghold
+    barrels_count: 1
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: Riverrun
+      pt: Correria
+
+  - slug: lannisport
+    type: Land
+    fortification_type: stronghold
+    barrels_count: 2
+    crowns_count: 0
+    house_sigil: Lannister
+    names:
+      en: Lannisport
+      pt: Lannisporto
+
+  - slug: port_of_lannisport
+    type: Port
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Port of Lannisport
+      pt: Porto de Lannisporto
+
+  - slug: harrenhal
+    type: Land
+    fortification_type: castle
+    barrels_count: 0
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: Harrenhal
+      pt: Harrenhal
+
+  - slug: crackclaw_point
+    type: Land
+    fortification_type: castle
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Crackclaw Point
+      pt: Ponta da Garra Rachada
+
+  - slug: stoney_sept
+    type: Land
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: Stoney Sept
+      pt: Septo Rochoso
+
+  - slug: dragonstone
+    type: Land
+    fortification_type: stronghold
+    barrels_count: 1
+    crowns_count: 1
+    house_sigil: Baratheon
+    names:
+      en: Dragonstone
+      pt: Pedra do Dragão
+
+  - slug: port_of_dragonstone
+    type: Port
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Port of Dragonstone
+      pt: Porto de Pedra do Dragão
+
+  - slug: blackwater
+    type: Land
+    fortification_type:
+    barrels_count: 2
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Blackwater
+      pt: Água Negra
+
+  - slug: searoad_marches
+    type: Land
+    fortification_type:
+    barrels_count: 1
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Searoad Marches
+      pt: Marchas da Estrada do Mar
+
+  - slug: kings_landing
+    type: Land
+    fortification_type: stronghold
+    barrels_count: 0
+    crowns_count: 2
+    house_sigil:
+    names:
+      en: King's Landing
+      pt: Porto Real
+
+  - slug: kingswood
+    type: Land
+    fortification_type:
+    barrels_count: 1
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: Kingswood
+      pt: Mata do Rei
+
+  - slug: reach
+    type: Land
+    fortification_type: castle
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: The Reach
+      pt: Campina
+
+  - slug: highgarden
+    type: Land
+    fortification_type: stronghold
+    barrels_count: 2
+    crowns_count: 0
+    house_sigil: Tyrell
+    names:
+      en: Highgarden
+      pt: Jardim de Cima
+
+  - slug: oldtown
+    type: Land
+    fortification_type: stronghold
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Oldtown
+      pt: Vila Velha
+
+  - slug: port_of_oldtown
+    type: Port
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Port of Oldtown
+      pt: Porto de Vila Velha
+
+  - slug: dornish_marches
+    type: Land
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: Dornish Marches
+      pt: Marchas Dornesas
+
+  - slug: boneway
+    type: Land
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: The Boneway
+      pt: O Caminho de Ossos
+
+  - slug: storms_end
+    type: Land
+    fortification_type: castle
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Storms End
+      pt: Ponta da Tempestade
+
+  - slug: port_of_storms_end
+    type: Port
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Port of Storms End
+      pt: Porto de Ponta da Tempestade
+
+  - slug: princes_pass
+    type: Land
+    fortification_type:
+    barrels_count: 1
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: Prince's Pass
+      pt: Passagem do Príncipe
+
+  - slug: three_towers
+    type: Land
+    fortification_type:
+    barrels_count: 1
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Three Towers
+      pt: Três Torres
+
+  - slug: arbor
+    type: Land
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 1
+    house_sigil:
+    names:
+      en: The Arbor
+      pt: O Arbusto
+
+  - slug: starfall
+    type: Land
+    fortification_type: castle
+    barrels_count: 1
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Starfall
+      pt: Queda de Estrela
+
+  - slug: yronwood
+    type: Land
+    fortification_type: castle
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Yronwood
+      pt: Yronwood
+
+  - slug: salt_shore
+    type: Land
+    fortification_type:
+    barrels_count: 1
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Salt Shore
+      pt: Costa de Sal
+
+  - slug: sunspear
+    type: Land
+    fortification_type: stronghold
+    barrels_count: 1
+    crowns_count: 1
+    house_sigil: Martell
+    names:
+      en: Sunspear
+      pt: Lançasolar
+
+  - slug: port_of_sunspear
+    type: Port
+    fortification_type:
+    barrels_count: 0
+    crowns_count: 0
+    house_sigil:
+    names:
+      en: Port of Sunspear
+      pt: Porto de Lançasolar

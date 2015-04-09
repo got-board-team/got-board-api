@@ -18,9 +18,11 @@ class MapArea < ActiveRecord::Base
     inclusion: { in: %w( castle stronghold ) }, allow_blank: true
   # TODO spec
   validates :barrels_count,
+    presence: true,
     numericality: {only_integer: true, greater_than_or_equal_to: 0}
   # TODO spec
   validates :crowns_count,
+    presence: true,
     numericality: {only_integer: true, greater_than_or_equal_to: 0}
   # TODO spec
   validates :house_sigil,
