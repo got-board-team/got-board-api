@@ -121,7 +121,7 @@ map_areas:
       en: The Shivering Sea
       pt: Mar do Arrepio
 
-  - slug: castle_blank
+  - slug: castle_black
     type: Land
     fortification_type:
     barrels_count: 0
@@ -131,7 +131,7 @@ map_areas:
       en: Castle Black
       pt: Castelo Negro
 
-  - slug: Karhold
+  - slug: karhold
     type: Land
     fortification_type:
     barrels_count: 0
