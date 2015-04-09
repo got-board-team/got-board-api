@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'dotenv-rails', '2.0.0'
+gem 'dotenv-rails', '2.0.1'
 
 gem 'rails', '4.2.1'
 # Use postgresql as the database for Active Record
@@ -47,7 +47,7 @@ group :test do
   gem 'api_matchers', '~> 0.6'
   gem 'timecop', '~> 0.7'
   gem 'fuubar', '~> 2.0'
-  gem 'shoulda-matchers', '~> 2.8', require: false
+  gem 'shoulda-matchers', '~> 2.8'
   gem 'simplecov', '~> 0.9', require: false
   gem 'codeclimate-test-reporter', '~> 0.4', require: false
 end
