@@ -4,9 +4,9 @@ class MapArea < ActiveRecord::Base
   belongs_to :map
 
   # TODO spec
-  validates :match_id, presence: true
+  validates :match, presence: true
   # TODO spec
-  validates :map_id, presence: true
+  validates :map, presence: true
   # TODO spec
   validates :slug, presence: true,
     uniqueness: {scope: :map_id, case_sensitive: false},

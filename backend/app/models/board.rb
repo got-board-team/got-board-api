@@ -12,6 +12,6 @@ class Board < ActiveRecord::Base
   # has_one: :victory_track                # multi-token, grouped
 
   # TODO spec
-  validates :match_id, presence: true
+  validates :match, presence: true
 
 end
