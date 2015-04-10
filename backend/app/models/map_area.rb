@@ -29,7 +29,8 @@ class MapArea < ActiveRecord::Base
     inclusion: { in: Player::HOUSES }, allow_blank: true
 
   # TODO spec
-  # Creates an MapArea from a fixture loaded from `config/map_areas.yml`.
+  # Creates an MapArea from a fixture loaded from
+  # `config/game_data/map_areas.yml`.
   # TODO: how to establish the relationship between a port and it's land?
   def self.create_from_fixture!(map, fixture)
     klass = fixture['type'].constantize

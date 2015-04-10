@@ -12,7 +12,7 @@ class Map < ActiveRecord::Base
   validates :use_kings_court_overlay, inclusion: { in: [true, false] }
 
   # TODO spec
-  # Reads info from `config/map_areas.yml` and creates all map areas related to
+  # Reads info from `config/game_data/map_areas.yml` and creates all map areas related to
   # this map.
   # TODO: how to establish the relationship between a port and it's land?
   def create_all_areas!(area_class=MapArea)
@@ -25,7 +25,7 @@ class Map < ActiveRecord::Base
 
   private
 
-  def fixtures(file_path='config/map_areas.yml')
+  def fixtures(file_path='config/game_data/map_areas.yml')
     @fixtures ||= YAML.load_file(File.join(Rails.root, file_path))
     @fixtures['map_areas']
   end
