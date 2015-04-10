@@ -1,0 +1,40 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+#board {
+  width: 1980px;
+  height: 2975px;
+  background-image: url("images/board.jpg");
+}
+
+.territory {
+  fill: none;
+  stroke: none;
+  pointer-events: all;
+}
+.territory:hover {
+  fill: orange;
+  opacity: 0.7;
+}
+
+.territory.drop-actived {
+  fill: white;
+  opacity: 0.7;
+}
+
+.unit {
+  background-repeat: no-repeat;
+  height: 70px;
+  width: 70px;
+  position: relative;
+}
+
+.stark-footmen{
+  background-image: url("images/units/stark-footman.png");
+}
+
+.stark-knight{
+  background-image: url("images/units/stark-knight.png");
+}
