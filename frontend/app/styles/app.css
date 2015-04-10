@@ -24,11 +24,6 @@ body {
   opacity: 0.7;
 }
 
-.piece {
-  height: 70;
-  width: 70;
-}
-
 .unit {
   background-repeat: no-repeat;
   height: 70px;

@@ -16,9 +16,9 @@ export default Ember.Route.extend({
       position: { x: 675, y: 648 },
     };
     return {
-      winterfell: {
+      territories: [{
         units: [ unit1, unit2],
-      },
+      }],
     };
   },
   setupController: function(controller, match) {
