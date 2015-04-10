@@ -48,7 +48,7 @@ class MatchSetupService
     def create_board(match, players)
       board = Board.create!(match: match)
       create_map(match, board, players)
-      create_tracks(board, players)
+      create_tracks(match, board, players)
       board
     end
 
@@ -64,8 +64,18 @@ class MatchSetupService
     end
 
     # TODO spec
-    def create_tracks(board, players)
-      # TODO
+    def create_tracks(match, board, players)
+      [
+        WildlingsTrack,
+        VictoryTrack,
+        # SupplyTrack,               # TODO
+        # RoundTrack,                # TODO
+        # KingsCourtInfluenceTrack,  # TODO
+        # IronThroneInfluenceTrack,  # TODO
+        # FiefdomsInfluenceTrack     # TODO
+      ].each do |track|
+        track.setup!(match, board, players)
+      end
     end
 
     # TODO spec

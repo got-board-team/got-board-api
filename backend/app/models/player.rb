@@ -1,5 +1,7 @@
 class Player < ActiveRecord::Base
 
+  # the order is important! DO NOT CHANGE!
+  # it is used elsewhere, like in VictoryTrack.setup! for example
   HOUSES = %w( Baratheon Lannister Stark Greyjoy Tyrell Martell )
 
   belongs_to :match
