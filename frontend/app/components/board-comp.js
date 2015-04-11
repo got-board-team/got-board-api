@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  attributeBindings: ["territories"],
   didInsertElement: function() {
     function dragStart() {
       window.dragging = true;

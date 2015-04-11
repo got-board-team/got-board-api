@@ -12,5 +12,6 @@ var App = Ember.Application.extend({
 });
 
 loadInitializers(App, config.modulePrefix);
+App.ApplicationAdapter = DS.FixtureAdapter;
 
 export default App;
