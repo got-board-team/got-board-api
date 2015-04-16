@@ -8,7 +8,7 @@ Match.reopenClass({
   FIXTURES: [
     {
       id: 1,
-      territories: [11],
+      territories: [11, 22],
     },
   ]
 });

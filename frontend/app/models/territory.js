@@ -16,6 +16,12 @@ Territory.reopenClass({
       slug: "winterfell",
       units: [111, 222],
     },
+    {
+      id: 22,
+      match: 1,
+      slug: "lannisport",
+      units: [],
+    },
   ]
 });
 
