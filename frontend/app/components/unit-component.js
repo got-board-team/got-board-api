@@ -1,9 +1,12 @@
 import Ember from 'ember';
+import Draggable from '../mixins/draggable';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(Draggable, {
   tagName: "foreignObject",
   classNames: ["piece"],
   attributeBindings: ["data-id", "data-type", "x", "y", "height", "width"],
+  "width": "100%",
+  "height": "100%",
   "data-id": function() {
     return this.unit.id;
   }.property('unit.id'),
@@ -11,8 +14,6 @@ export default Ember.Component.extend({
     var unit = this.get('unit');
     return unit.get('type');
   }.property('unit.type'),
-  "width": "100%",
-  "height": "100%",
   "x": function() {
     var unit = this.get('unit');
     return unit.get('positionX');

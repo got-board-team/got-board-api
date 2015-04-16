@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   didInsertElement: function() {
     function dragStart() {
       window.dragging = true;
+      console.log(0);
       d3.select(this).attr('pointer-events', 'none');
     }
 
@@ -32,7 +33,7 @@ export default Ember.Component.extend({
                  );
     }
 
-    var drag = d3.behavior.drag().
+    window.drag = d3.behavior.drag().
         on("dragstart", dragStart).
         on("drag", dragmove).
         on("dragend", dragEnd);
