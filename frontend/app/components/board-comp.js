@@ -52,7 +52,6 @@ export default Ember.Component.extend({
     });
 
     d3.selectAll(".piece").call(drag);
-    console.log('loaded');
   },
   actions: {
   }
