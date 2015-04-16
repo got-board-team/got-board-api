@@ -17,7 +17,7 @@
   "engines": {
     "node": ">= 0.12.0"
   },
-  "author": "Leandro Thimóteo, Rafael Tauil Wanderson Policarpo, Rodrigo Tassinari",
+  "author": "Leandro Thimóteo, Rafael Tauil, Wanderson Policarpo, Rodrigo Tassinari",
   "license": "MIT",
   "devDependencies": {
     "bower": "~1.4.1",
