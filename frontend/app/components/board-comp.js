@@ -2,44 +2,6 @@ import Ember from 'ember';
 
 export default Ember.Component.extend({
   didInsertElement: function() {
-    function dragStart() {
-      window.dragging = true;
-      console.log(0);
-      d3.select(this).attr('pointer-events', 'none');
-    }
-
-    function moveUnit(elm, dx, dy) {
-      var x = parseFloat(d3.select(elm).attr("x")) || 0;
-      var y = parseFloat(d3.select(elm).attr("y") || 0);
-      x += dx;
-      y += dy;
-      d3.select(elm).attr("x", x).attr("y", y);
-    }
-
-    function dragmove() {
-      var ev = d3.event;
-      moveUnit(this, ev.dx, ev.dy);
-    }
-
-    function dragEnd() {
-      window.dragging = false;
-      d3.select(this).attr( 'pointer-events', null);
-      d3.selectAll(".territory").classed("drop-actived", false);
-      console.log(this.getAttribute("data-unit-type") +
-                  ' was dropped into ' +
-                  window.currentTerritory.parentNode.id +
-                  ' at x: ' + this.getAttribute("x") +
-                  ' , y: ' + this.getAttribute("y")
-                 );
-    }
-
-    window.drag = d3.behavior.drag().
-        on("dragstart", dragStart).
-        on("drag", dragmove).
-        on("dragend", dragEnd);
-
-
-
     d3.selectAll(".territory").on("mouseout", function(){
       d3.selectAll(".territory").classed("drop-actived", false);
     });
@@ -51,9 +13,5 @@ export default Ember.Component.extend({
       window.currentTerritory = this;
       console.log("over", this.parentNode.id);
     });
-
-    d3.selectAll(".piece").call(drag);
-  },
-  actions: {
   }
 });

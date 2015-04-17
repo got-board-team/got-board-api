@@ -21,5 +21,8 @@ export default Ember.Component.extend(Draggable, {
   "y": function() {
     var unit = this.get('unit');
     return unit.get('positionY');
-  }.property('unit.positionY')
+  }.property('unit.positionY'),
+  didInsertElement: function() {
+    this.initializeDrag();
+  }
 });
