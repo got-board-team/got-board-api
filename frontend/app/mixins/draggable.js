@@ -20,6 +20,7 @@ export default Ember.Mixin.create({
     window.dragging = false;
     d3.select(this).attr( 'pointer-events', null);
     d3.selectAll(".territory").classed("drop-actived", false);
+    window.currentTerritory.parentNode.appendChild(this);
     console.log(this.getAttribute("data-type") +
                 ' was dropped into ' +
                 window.currentTerritory.parentNode.id +
