@@ -41,6 +41,7 @@ group :development do
   gem 'meta_request', '~> 0.3'
   gem 'quiet_assets', '~> 1.1'
   gem 'bullet', '~> 4.14'
+  gem 'nokogiri', '~> 1.6.6.2'
 end
 
 group :test do

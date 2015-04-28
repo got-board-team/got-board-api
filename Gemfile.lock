@@ -216,6 +216,7 @@ DEPENDENCIES
   fuubar (~> 2.0)
   jbuilder (= 2.2.12)
   meta_request (~> 0.3)
+  nokogiri (~> 1.6.6.2)
   pg (= 0.18.1)
   pry-byebug (~> 3.1)
   pry-remote (~> 0.1)
