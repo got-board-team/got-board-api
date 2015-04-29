@@ -1,16 +1,17 @@
-# got-board
+## README
 
-Links:
+This README would normally document whatever steps are necessary to get the application up and running.
 
-* [A Game of Thrones Board Game, 2nd edition](https://www.fantasyflightgames.com/en/products/a-game-of-thrones-the-board-game-second-edition/)
-* [Rules](https://images-cdn.fantasyflightgames.com/filer_public/30/4f/304f72e3-4fe4-4f91-bfbe-75133161b092/va65_agot2_rulebook_web.pdf) (en_US)
-* [Rules](http://www.galapagosjogos.com.br/jogos/a-guerra-dos-tronos-board-game/download_asset/70) (pt_BR)
-* [FAQ](https://images-cdn.fantasyflightgames.com/filer_public/c0/fc/c0fcd94d-ad0e-4ac0-947e-b258356fabfd/va65_agot2_faq_v1_4.pdf) (en_US)
+Things you may want to cover:
 
-## TODO
+* Ruby version
+* System dependencies
+* Configuration
+* Database creation
+* Database initialization
+* How to run the test suite
+* Services (job queues, cache servers, search engines, etc.)
+* Deployment instructions
+* ...
 
-* define framework Ember?
-* create draggable board with n pieaces
-* socket for multiple players?
-* assign board image to board
-* assign piaces images
+Please feel free to use a different markup language if you do not plan to run <tt>rake doc:app</tt>.

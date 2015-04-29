@@ -1,2 +1,0 @@
-class VictoryTrack < Track
-end

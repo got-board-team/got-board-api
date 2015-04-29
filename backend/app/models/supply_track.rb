@@ -1,2 +1,0 @@
-class SupplyTrack < Track
-end

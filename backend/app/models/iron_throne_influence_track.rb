@@ -1,2 +1,0 @@
-class IronThroneInfluenceTrack < InfluenceTrack
-end

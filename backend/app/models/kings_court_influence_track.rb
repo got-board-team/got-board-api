@@ -1,2 +1,0 @@
-class KingsCourtInfluenceTrack < InfluenceTrack
-end

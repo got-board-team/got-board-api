@@ -1,2 +1,0 @@
-class RoundTrack < Track
-end

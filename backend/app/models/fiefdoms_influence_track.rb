@@ -1,2 +1,0 @@
-class FiefdomsInfluenceTrack < InfluenceTrack
-end
