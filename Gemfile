@@ -10,7 +10,7 @@ gem 'pg', '0.18.1'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '2.7.1'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '2.2.12'
+gem 'jbuilder', '2.2.13'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
@@ -51,6 +51,6 @@ group :test do
   gem 'timecop', '~> 0.7'
   gem 'fuubar', '~> 2.0'
   gem 'shoulda-matchers', '~> 2.8'
-  gem 'simplecov', '~> 0.9', require: false
+  gem 'simplecov', '~> 0.10', require: false
   gem 'codeclimate-test-reporter', '~> 0.4', require: false
 end
