@@ -13,8 +13,13 @@ gem 'uglifier', '2.7.1'
 gem 'jbuilder', '2.2.12'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
-
+# Brings convention over configuration to your JSON generation
+# Read more: https://github.com/rails-api/active_model_serializers
+gem 'active_model_serializers', '~> 0.9.3'
+  #git: 'https://github.com/rails-api/active_model_serializers.git',
+  #tag: 'v0.10.0.rc1'
 # Use ActiveModel has_secure_password
+#
 # gem 'bcrypt', '3.1.10'
 
 # Use Unicorn as the app server

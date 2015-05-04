@@ -1,7 +1,6 @@
 class Map < ActiveRecord::Base
 
   belongs_to :match
-  belongs_to :board
   has_many :map_areas
 
   # TODO spec
@@ -21,6 +20,12 @@ class Map < ActiveRecord::Base
         area_class.create_from_fixture!(self, fixture)
       end
     end
+  end
+
+  # TODO spec
+  def territories(file_path='config/game_data/map_areas.yml')
+    @fixtures ||= YAML.load_file(File.join(Rails.root, file_path))
+    @fixtures['map_areas']
   end
 
   private
