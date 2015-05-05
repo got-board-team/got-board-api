@@ -9,7 +9,7 @@ namespace :game_data do
     svg = Nokogiri::XML.parse(original)
     errors = []
 
-    territories['map_areas'].each do |territory|
+    territories['map_areas'].each_with_index do |territory, index|
       slug = territory['slug'].gsub(/_/, '-').gsub("port-of", "port")
       path = svg.at_css("##{slug} path")
       path = svg.at_css("##{slug}") if path.nil?
@@ -17,6 +17,7 @@ namespace :game_data do
         errors << slug
         next
       end
+      territory['id'] = index + 1
       territory['path'] = path['d']
     end
 

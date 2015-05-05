@@ -1,11 +1,11 @@
-# TODO verify the names in portuguese
+---
 map_areas:
 - slug: bay_of_ice
   type: Sea
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Bay of Ice
     pt: Baía de Gelo
@@ -63,12 +63,13 @@ map_areas:
     327.437,1156.62 302.638,1164.7C297.709,1168.06 293.254,1170.54 289.236,1172.06L272.842,1172.06C268.11,1169.27
     264.785,1163.01 262.8,1153.27C259.487,1159.05 241.716,1124.52 241.978,1108.09C239.62,1101.55
     204.306,1100.68 197.796,1108.48C156.413,1143.73 119.797,1064.52 94.5602,1064.26Z
+  id: 1
 - slug: sunset_sea
   type: Sea
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Sunset Sea
     pt: Mar do Poente
@@ -91,12 +92,13 @@ map_areas:
     288.933,1932.31 276.528,1945.58C283.653,1959.11 281.521,1966.57 270.132,1967.96L250.247,2052.42L230.893,2063.61C237.634,2068.15
     237.945,2074.47 231.825,2082.56C212.999,2043.12 191.561,2058.73 172.764,2096.35C158.181,2084.19
     140.714,2045.78 116.528,2050.6Z
+  id: 2
 - slug: ironmans_bay
   type: Sea
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Ironman's Bay
     pt: Baía dos Homens de Ferro
@@ -124,12 +126,13 @@ map_areas:
     616.317,1523.28C610.21,1540.6 598.862,1547.07 582.273,1542.69C583.632,1544.71
     514.025,1516.91 500.27,1536.23C469.822,1531.74 450.488,1537.25 442.268,1552.76C406.813,1552.59
     388.399,1556.94 363.702,1579.81C313.29,1595.27 288.729,1630.43 256.838,1619.11Z
+  id: 3
 - slug: the_golden_sound
   type: Sea
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: The Golden Sound
     pt: Canal Dourado
@@ -149,12 +152,13 @@ map_areas:
     513.695,1517.37 500.27,1536.23C469.822,1531.74 450.488,1537.25 442.268,1552.76C406.813,1552.59
     388.399,1556.94 363.702,1579.81C313.29,1595.27 288.729,1630.43 256.838,1619.11C220.677,1643.52
     178.389,1637.05 137.029,1696.71L103.543,1754.53Z
+  id: 4
 - slug: west_summer_sea
   type: Sea
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: West Summer Sea
     pt: Mar do Verão Oeste
@@ -178,12 +182,13 @@ map_areas:
     248.817,2885.26 277.637,2848.08C288.367,2829.43 292.086,2811.74 293.367,2796.15C307.941,2793.81
     322.814,2790.34 338.346,2784.39C354.731,2796.77 375.589,2798.9 400.919,2790.79C433.026,2805.14
     441.106,2795.57 425.158,2762.09C471.61,2754.9 428.177,2726.84 451.796,2697.62Z
+  id: 5
 - slug: redwyne_straights
   type: Sea
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Redwyne Straights
     pt: Estreito de Redwyne
@@ -212,12 +217,13 @@ map_areas:
     313.254,2708.78 322.48,2713.53C322.685,2724.25 330.889,2727.56 330.125,2747.36L342.824,2744.5C353.588,2732.68
     364.634,2732.23 375.963,2743.13L383.018,2736.34C389.307,2721.19 402.338,2720.68
     418.432,2726.82C428.405,2715.03 438.606,2703.66 451.796,2697.62Z
+  id: 6
 - slug: east_summer_sea
   type: Sea
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: East Summer Sea
     pt: Mar do Verão Leste
@@ -246,12 +252,13 @@ map_areas:
     1395.61,2704.7 1395.61,2672.39C1395.61,2640.08 1369.42,2613.88 1337.11,2613.88C1327.63,2613.88
     1318.67,2616.14 1310.76,2620.14ZM1279.7,2310.57C1276.49,2313.61 1273.51,2315.14
     1270.76,2315.14L1273.25,2313.45L1279.7,2310.57ZM710.099,2790.15L710.038,2790.14L709.978,2790.12L709.898,2790.1L709.716,2790.04L709.619,2790.01L709.586,2790L709.549,2789.99L709.22,2789.89L709.586,2790L709.716,2790.04L709.978,2790.12L710.099,2790.15ZM682.466,2771.77L682.505,2771.83L682.487,2771.8L682.466,2771.77ZM681.986,2771.03L682.008,2771.06L682.222,2771.4L682.246,2771.43L682.239,2771.42L682.222,2771.4L682.119,2771.24L682.008,2771.06L681.994,2771.04L681.986,2771.03Z
+  id: 7
 - slug: sea_of_dorne
   type: Sea
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Sea of Dorne
     pt: Mar de Dorne
@@ -277,12 +284,13 @@ map_areas:
     1159.2,2622.29 1167.24,2613.11C1186.27,2616.09 1201.67,2609.18 1213.43,2592.37C1227.99,2589.29
     1239.58,2582.41 1244.66,2567.2L1266.63,2558.18C1271.04,2573.92 1281.45,2587.41
     1297.9,2598.67L1298.06,2598.79L1298.25,2598.93L1297.9,2598.67Z
+  id: 8
 - slug: shipbreaker_bay
   type: Sea
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Shipbreaker Bay
     pt: Baía de Quebra de Navios
@@ -313,12 +321,13 @@ map_areas:
     1237.86,1906.47C1226.33,1892.25 1218.07,1879.56 1209.92,1866.81L1208.32,1861.33C1211.06,1852.03
     1198.99,1843.81 1188.15,1834.82C1169.4,1836.09 1162.3,1824.52 1165.74,1800.77C1167.67,1786.09
     1161.73,1776.05 1147.93,1770.66L1146.98,1769.86Z
+  id: 9
 - slug: blackwater_bay
   type: Sea
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Blackwater Bay
     pt: Baía da Água Negra
@@ -334,12 +343,13 @@ map_areas:
     1147.28,1770.89 1146.98,1769.86L1147.93,1770.66C1161.73,1776.05 1167.67,1786.09
     1165.74,1800.77C1162.3,1824.52 1169.4,1836.09 1188.15,1834.82C1198.99,1843.81
     1211.06,1852.03 1208.32,1861.33L1209.92,1866.81Z
+  id: 10
 - slug: the_narrow_sea
   type: Sea
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: The Narrow Sea
     pt: Mar Estreito
@@ -418,12 +428,13 @@ map_areas:
     855.29,1077.12 855.29,1086.66C855.29,1118.97 881.484,1145.17 913.796,1145.17C944.916,1145.17
     970.361,1120.87 972.196,1090.21ZM1164.85,919.87L1155.04,920.032C1154.34,918.059
     1153.51,915.941 1152.74,913.688L1164.85,919.87Z
+  id: 11
 - slug: the_shivering_sea
   type: Sea
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: The Shivering Sea
     pt: Mar do Arrepio
@@ -469,12 +480,13 @@ map_areas:
     1057.45,291.895 1058.81,286.582C1053.43,289.294 1050.22,287.783 1049.17,282.047C1034.74,279.428
     1029.76,263.13 1034.24,233.154C1029.9,232.067 1026.86,227.915 1025.12,220.697L1034.91,188.165L938.378,39.6888C927.344,21.7933
     883.556,30.6266 837.097,-1.46745L1499.52,-1.82682L1502.89,975.29L1496.78,976.58Z
+  id: 12
 - slug: castle_black
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: Castle Black
     pt: Castelo Negro
@@ -493,12 +505,13 @@ map_areas:
     640.823,341.763 638.779,337.26C666.469,329.409 680.915,318.999 682.117,306.029C687.868,310.187
     694.409,310.798 701.74,307.861C715.882,307.835 720.449,300.14 715.439,284.777C722.51,275.833
     729.421,267.101 746.67,244.551C754.561,242.426 758.889,233.863 759.652,218.863Z
+  id: 13
 - slug: karhold
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: Karhold
     pt: Karhold
@@ -520,6 +533,7 @@ map_areas:
     1239.82,424.083 1228.51,422.677C1221.45,440.574 1207.28,442.148 1189.88,436.302C1189.79,430.762
     1189.88,427.779 1186.1,426.61C1175.37,427.653 1169.13,421.667 1164.93,412.485C1151.77,416.386
     1142.75,412.584 1135.84,404.886C1119.35,409.953 1108.88,406.645 1104.4,394.96Z
+  id: 14
 - slug: winterfell
   type: Land
   fortification_type: stronghold
@@ -558,24 +572,26 @@ map_areas:
     887.155,377.525 872.383,401.221C862.992,410.228 851.643,412.406 838.338,407.754C821.618,418.309
     805.741,427.524 795.76,427.359C768.692,435.686 755.16,473.347 736.52,483.506C717.498,476.447
     694.111,508.21 670.857,496.836C645.132,498.247 623.658,496.376 611.537,487.287Z
+  id: 15
 - slug: port_of_winterfell
   type: Port
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Port of Winterfell
     pt: Porto de Winterfell
   path: M408.425,461.079C440.737,461.079 466.932,487.274 466.932,519.586C466.932,551.898
     440.737,578.092 408.425,578.092C376.113,578.092 349.919,551.898 349.919,519.586C349.919,487.274
     376.113,461.079 408.425,461.079Z
+  id: 16
 - slug: the_stony_shore
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 1
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: The Stony Shore
     pt: Litoral Rochoso
@@ -600,12 +616,13 @@ map_areas:
     552.65,805.864 554.885,799.893C535.283,791.908 526.286,782.089 527.895,770.434L500.371,751.723C464.464,754.756
     447.913,741.945 447.401,716.006C421.256,674.761 463.178,677.29 404.993,651.781C393.491,636.636
     364.549,643.076 322.94,663.822Z
+  id: 17
 - slug: white_harbor
   type: Land
   fortification_type: castle
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: White Harbor
     pt: Porto Branco
@@ -623,24 +640,26 @@ map_areas:
     1015.47,1069.4 1014.36,1077.77C989.745,1078.29 972.221,1082.64 970.298,1095.42L947.366,1079.28L860.949,1060C864.783,1028.15
     855.872,1004.07 838.241,985.286C830.206,966.917 823.171,969.706 817.137,993.653C800.293,1009.29
     786.872,1014.83 775.007,1015.77Z
+  id: 18
 - slug: port_of_white_harbor
   type: Port
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Port of White Harbor
     pt: Porto de White Harbor
   path: M913.796,1028.15C946.108,1028.15 972.303,1054.35 972.303,1086.66C972.303,1118.97
     946.108,1145.17 913.796,1145.17C881.484,1145.17 855.29,1118.97 855.29,1086.66C855.29,1054.35
     881.484,1028.15 913.796,1028.15Z
+  id: 19
 - slug: widows_watch
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 1
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Whidow's Watch
     pt: Patrulha da Viúva
@@ -657,12 +676,13 @@ map_areas:
     1147.27,876.2 1146.83,861.624L1155.54,861.979L1151.07,849.813L1138.56,850.202C1132.15,842.83
     1127.51,832.99 1129.54,824.71L1121.43,822.637L1124.03,815.565C1109.24,819.639
     1099.06,806.968 1090.96,786.686C1058.29,784.898 1045.97,774.327 1020.97,786.079Z
+  id: 20
 - slug: flints_finger
   type: Land
   fortification_type: castle
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Flint's Finger
     pt: O Dedo de Flint
@@ -676,12 +696,13 @@ map_areas:
     210.956,1158.1 217.197,1140.86C219.994,1135.63 224.428,1135 230.499,1138.97C226.76,1144.94
     228.692,1148.4 236.294,1149.35C238.861,1154.67 242.516,1158.43 247.257,1160.65L262.8,1153.27C267.594,1176.78
     280.206,1180.03 302.638,1164.7C327.437,1156.62 330.25,1146.27 311.077,1133.64Z
+  id: 21
 - slug: greywater_watch
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 1
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Greywater Watch
     pt: Patrulha da Água Cinza
@@ -693,12 +714,13 @@ map_areas:
     613.293,1102.51 608.642,1090.94C608.523,1082.26 612.291,1072.57 618.919,1059.82L564.982,1063.92C546.174,1074.23
     535.56,1075.77 533.14,1068.54C515.08,1080.04 497.68,1084.79 481.245,1079.67C471.66,1089.84
     461.396,1093.95 450.456,1092C435.862,1103.09 426.872,1098.18 420.429,1086.01Z
+  id: 22
 - slug: moat_cailin
   type: Land
   fortification_type: castle
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Moat Cailin
     pt: Fosso Cailin
@@ -716,12 +738,13 @@ map_areas:
     582.93,1306.68 576.88,1297.74C586.22,1294.58 588.61,1283.43 587.841,1268.65C581.104,1263.13
     584.199,1257.45 588.699,1251.75C570.187,1199.47 575.615,1155.8 604.982,1120.73C613.757,1112.39
     612.245,1101.11 609.263,1089.42C609.613,1079.77 613.099,1069.84 619.72,1059.63Z
+  id: 23
 - slug: seagard
   type: Land
   fortification_type: stronghold
   barrels_count: 1
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: Seagard
     pt: Guardamar
@@ -733,6 +756,7 @@ map_areas:
     532.947,1450.87 516.713,1451.03L501.643,1462.61L488.26,1461.73L478.286,1434.04C498.525,1431.33
     518.893,1424.76 539.887,1399.55C559.439,1385.38 551.295,1372.62 530.562,1360.5C522.108,1342.42
     508.922,1316.83 485.538,1290.89C471.166,1295.09 463.621,1290.92 460.747,1281.01Z
+  id: 24
 - slug: pyke
   type: Land
   fortification_type: stronghold
@@ -746,24 +770,26 @@ map_areas:
     393.899,1494.91 387.218,1506.29L399.742,1514.45L399.742,1526.75L384.005,1536.99C368.617,1531.8
     360.789,1534.55 360.52,1545.22C329.619,1529.74 360.241,1560.29 279.908,1579.25C273.105,1572.95
     265.13,1570.29 254.577,1575.65C243.282,1585.08 235.296,1586.01 230.619,1578.43L101.786,1458.26L102.755,1337.39Z
+  id: 25
 - slug: port_of_pyke
   type: Port
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Port of Pyke
     pt: Porto de Pyke
   path: M355.553,1324.89C387.865,1324.89 414.059,1351.09 414.059,1383.4C414.059,1415.71
     387.865,1441.91 355.553,1441.91C323.24,1441.91 297.046,1415.71 297.046,1383.4C297.046,1351.09
     323.24,1324.89 355.553,1324.89Z
+  id: 26
 - slug: the_twins
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: The Twins
     pt: As Gêmeas
@@ -777,12 +803,13 @@ map_areas:
     867.274,1421.29 883.064,1425.99L891.723,1414.88C869.412,1407.08 858.673,1382.98
     855.854,1347.74C873.999,1320.84 869.472,1312.16 844.434,1286.14L798.38,1292.3C785.207,1308.37
     772.671,1307.55 760.773,1289.84L747.364,1288.89Z
+  id: 27
 - slug: the_fingers
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 1
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: The Fingers
     pt: Os Dedos
@@ -807,12 +834,13 @@ map_areas:
     1180.73,1185.24 1190.84,1178.35C1197.06,1179.37 1202.61,1177.4 1207.85,1174.07L1202.98,1181.51L1165.5,1199.57C1167.2,1213.25
     1150.68,1223.31 1121.68,1230.87L1106.82,1243.22C1096.25,1250.74 1100.77,1252.88
     1112.15,1252.59Z
+  id: 28
 - slug: the_mountains_of_the_moon
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 1
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: The Mountains of the Moon
     pt: As Montanhas da Lua
@@ -837,12 +865,13 @@ map_areas:
     1040.24,1421.07 1013.37,1410.48L985.111,1421.1C926.09,1402.65 935.327,1426.34
     890.125,1415.44L882.717,1425.68C860.17,1412.34 835.318,1437.68 817.047,1457.01C798.711,1454.81
     788.283,1457.33 781.449,1462C759.962,1461.77 747.598,1479.93 739.379,1506.45Z
+  id: 29
 - slug: the_eyrie
   type: Land
   fortification_type: castle
   barrels_count: 1
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: The Eyrie
     pt: O Ninho da Águia
@@ -858,12 +887,13 @@ map_areas:
     1306.62,1491.51C1299.44,1496.69 1293.18,1496.01 1287.82,1489.46C1278.54,1497.55
     1269.45,1496.87 1260.44,1492.2C1250.6,1508.02 1239.2,1510.94 1226.74,1505.03C1207.54,1517.1
     1189.23,1520.75 1171.79,1515.99C1147.37,1526.61 1126.72,1528.04 1109.85,1520.27L1091.51,1510.28Z
+  id: 30
 - slug: riverrun
   type: Land
   fortification_type: stronghold
   barrels_count: 1
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: Riverrun
     pt: Correria
@@ -877,6 +907,7 @@ map_areas:
     805.176,1649.48C815.738,1647.7 825.33,1645.38 828.132,1639.28C805.527,1625.79
     818.342,1619.47 803.031,1587.5C769.4,1565.3 749.352,1541.11 733.645,1516.27C703.629,1535.16
     677.231,1501.39 626.82,1483.87Z
+  id: 31
 - slug: lannisport
   type: Land
   fortification_type: stronghold
@@ -898,24 +929,26 @@ map_areas:
     449.106,1771.82 471.072,1772.13C482.108,1771.58 491.311,1762.25 511.226,1746.59C520.271,1748.67
     525.563,1740.08 527.101,1720.84C529.552,1690.18 500.961,1702.71 505.179,1687.28L507.062,1661.91C536.268,1643.9
     500.422,1635.07 489.307,1594.36Z
+  id: 32
 - slug: port_of_lannisport
   type: Port
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Port of Lannisport
     pt: Porto de Lannisporto
   path: M287.946,1696.83C320.258,1696.83 346.452,1723.03 346.452,1755.34C346.452,1787.65
     320.258,1813.85 287.946,1813.85C255.634,1813.85 229.439,1787.65 229.439,1755.34C229.439,1723.03
     255.634,1696.83 287.946,1696.83Z
+  id: 33
 - slug: harrenhal
   type: Land
   fortification_type: castle
   barrels_count: 0
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: Harrenhal
     pt: Harrenhal
@@ -925,12 +958,13 @@ map_areas:
     661.615,1689.56 690.301,1668.69L674.344,1649.69L697.65,1620.78C710.685,1638.47
     729.468,1642.64 754,1633.29L762.508,1638.73C774.494,1628.96 787.281,1630.57 800.868,1643.54C804.91,1649.98
     814.351,1649.15 829.193,1641.03C830.783,1655.2 845.211,1656.37 865.475,1651.64L864.587,1651.54Z
+  id: 34
 - slug: crackclaw_point
   type: Land
   fortification_type: castle
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Crackclaw Point
     pt: Ponta da Garra Rachada
@@ -945,12 +979,13 @@ map_areas:
     1239.58,1671.17 1223.39,1675.42C1217.92,1689.83 1205.89,1693.9 1190.86,1693.26C1184.85,1705.17
     1174.36,1712.02 1159.42,1713.83C1135.32,1746.7 1130.69,1728.51 1075.37,1715.57L1051.42,1720.52C1017.45,1742.4
     984.135,1731.39 951.477,1687.47Z
+  id: 35
 - slug: stoney_sept
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: Stoney Sept
     pt: Septo Rochoso
@@ -963,6 +998,7 @@ map_areas:
     538.504,1739.82 527.278,1724.18L511.979,1746.56C479.38,1790.32 437.193,1764.88
     465.979,1792.39C458.673,1802.06 462.545,1810.52 468.015,1818.82C464.584,1832.35
     466.091,1842.81 472.536,1850.23Z
+  id: 36
 - slug: dragonstone
   type: Land
   fortification_type: stronghold
@@ -974,24 +1010,26 @@ map_areas:
     pt: Pedra do Dragão
   path: M1322.54,1698.66L1465.52,1698.66L1465.52,1944.7L1354.45,1944.7L1242.02,1798.6C1223.14,1790.7
     1232.5,1785.39 1254.71,1781.25L1264.46,1781.25L1322.54,1698.66Z
+  id: 37
 - slug: port_of_dragonstone
   type: Port
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Port of Dragonstone
     pt: Porto de Pedra do Dragão
   path: M1391.28,1882.7C1423.59,1882.7 1449.79,1908.9 1449.79,1941.21C1449.79,1973.52
     1423.59,1999.72 1391.28,1999.72C1358.97,1999.72 1332.77,1973.52 1332.77,1941.21C1332.77,1908.9
     1358.97,1882.7 1391.28,1882.7Z
+  id: 38
 - slug: blackwater
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 2
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Blackwater
     pt: "Água Negra"
@@ -1006,12 +1044,13 @@ map_areas:
     744.557,2068 749.346,2096.76C717.558,2089.43 702.036,2101.19 687.952,2116.83L660.322,2113.67C636.226,2125.8
     610.985,2136.11 583.229,2131.64C565.954,2122.29 549.6,2114.67 534.166,2115.5C520.041,2123.2
     503.892,2122.78 485.718,2114.25Z
+  id: 39
 - slug: searoad_marches
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 1
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Searoad Marches
     pt: Marchas da Estrada do Mar
@@ -1024,12 +1063,13 @@ map_areas:
     460.76,2085.62 468.031,2061.32C459.88,2043.76 458.136,2026.41 470.486,2009.52L464.778,1959.79L471.171,1891.34L461.39,1857.54C435.906,1890.99
     425.945,1877.53 402.848,1896.8C391.956,1891.98 377.237,1893.81 358.692,1902.28L322.439,1902.74C310.057,1895.61
     299.776,1893.99 291.598,1897.87Z
+  id: 40
 - slug: kings_landing
   type: Land
   fortification_type: stronghold
   barrels_count: 0
   crowns_count: 2
-  house_sigil:
+  house_sigil: 
   names:
     en: King's Landing
     pt: Porto Real
@@ -1041,12 +1081,13 @@ map_areas:
     954.52,2005.16 969.249,1979.64C947.773,1960.93 954.395,1949.6 989.117,1945.65C1000.51,1932.94
     1015.27,1926.39 1033.38,1926.01L1028.59,1942.44L1043.59,1931.02C1041.18,1908.08
     1052.33,1897.02 1069.64,1891.34C1063.56,1885.61 1061.66,1879.46 1063.93,1872.91Z
+  id: 41
 - slug: kingswood
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 1
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: Kingswood
     pt: Mata do Rei
@@ -1062,12 +1103,13 @@ map_areas:
     1159.21,1985.43 1147.05,1986.04C1130.2,2003.44 1119.91,2008.77 1112.6,2008.61C1109.8,2024.66
     1101.85,2031.73 1089.61,2031.36C1057.27,2066.21 1017.44,2096.31 964.945,2118.36C945.634,2122.9
     930.245,2120.76 916.637,2115.58Z
+  id: 42
 - slug: the_reach
   type: Land
   fortification_type: castle
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: The Reach
     pt: Campina
@@ -1082,6 +1124,7 @@ map_areas:
     581.739,2128.91C569.91,2119.37 554.732,2113.45 532.184,2115.47C520.422,2124.88
     500.479,2124.8 474.939,2118.21C462.58,2151.26 458.405,2172.34 462.414,2181.45C476.18,2194.27
     485.06,2220.75 496.989,2255.5Z
+  id: 43
 - slug: highgarden
   type: Land
   fortification_type: stronghold
@@ -1100,12 +1143,13 @@ map_areas:
     479.467,2209.19 464.13,2183.95C439.513,2169.29 415.221,2156.54 391.775,2148.78C378.101,2135.77
     362.346,2126.67 342.012,2126.18L319.632,2138.52C292.041,2148.65 261.879,2153.57
     229.145,2153.28Z
+  id: 44
 - slug: oldtown
   type: Land
   fortification_type: stronghold
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Oldtown
     pt: Vila Velha
@@ -1117,24 +1161,26 @@ map_areas:
     413.426,2483.81 419.777,2465.71C418.016,2416.42 442.707,2414.37 429.645,2378.05C422.521,2374.89
     415.03,2375.88 407.17,2381.02C398.277,2377.3 389.126,2376.47 379.715,2378.54C379.528,2372.06
     375.657,2366.07 363.684,2361.12L349.725,2368.3C328.342,2374.1 314.6,2371.83 308.498,2361.5L308.125,2352.86Z
+  id: 45
 - slug: port_of_oldtown
   type: Port
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Port of Oldtown
     pt: Porto de Vila Velha
   path: M198.074,2369.99C230.386,2369.99 256.58,2396.19 256.58,2428.5C256.58,2460.81
     230.386,2487.01 198.074,2487.01C165.761,2487.01 139.567,2460.81 139.567,2428.5C139.567,2396.19
     165.761,2369.99 198.074,2369.99Z
+  id: 46
 - slug: dornish_marches
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: Dornish Marches
     pt: Marchas Dornesas
@@ -1145,12 +1191,13 @@ map_areas:
     734.819,2295.38 709.475,2295.44C675.509,2271.8 639.616,2259.74 600.906,2264.6C591.807,2286.42
     569.704,2294.42 538.705,2292.96C521.443,2297.82 507.934,2306.64 500.18,2322.59C478.247,2325.45
     461.721,2336.76 450.602,2356.53C440.542,2360.46 434.655,2368.35 430.664,2378.02Z
+  id: 47
 - slug: the_boneway
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: The Boneway
     pt: O Caminho de Ossos
@@ -1165,12 +1212,13 @@ map_areas:
     978.204,2302.7 962.896,2281.75C920.917,2273.94 889.811,2273.45 882.627,2289.04C848.204,2308.57
     817.177,2330.33 787.695,2353.11C755.445,2354.65 735.982,2362.22 729.307,2375.81C715.928,2367.9
     707.906,2376.08 705.24,2400.35Z
+  id: 48
 - slug: storms_end
   type: Land
   fortification_type: castle
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Storms End
     pt: Ponta da Tempestade
@@ -1189,24 +1237,26 @@ map_areas:
     1115.14,2224.51 1126.56,2230.55L1136.44,2228.18C1135.53,2221.04 1139.48,2216.55
     1148.27,2214.71C1154.55,2233.82 1161.23,2234.22 1168.3,2215.93L1176.56,2201.49L1174.69,2178.05L1186.19,2171.5C1179.6,2167.12
     1177.66,2160.61 1180.37,2151.96C1168.04,2143.21 1161.04,2133.06 1159.38,2121.5Z
+  id: 49
 - slug: port_of_storms_end
   type: Port
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Port of Storms End
     pt: Porto de Ponta da Tempestade
   path: M1173.33,2231.5C1205.64,2231.5 1231.83,2257.69 1231.83,2290.01C1231.83,2322.32
     1205.64,2348.51 1173.33,2348.51C1141.02,2348.51 1114.82,2322.32 1114.82,2290.01C1114.82,2257.69
     1141.02,2231.5 1173.33,2231.5Z
+  id: 50
 - slug: princes_pass
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 1
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: Prince's Pass
     pt: Passagem do Príncipe
@@ -1217,12 +1267,13 @@ map_areas:
     677.797,2573L669.521,2562.13C673.705,2556.36 678.506,2541.59 683.924,2517.83C689.23,2507.54
     694.661,2498.9 700.215,2491.89C727.171,2471.61 694.668,2447.08 704.047,2400.9C684.764,2373.64
     647.18,2377.31 594.434,2406.59C571.786,2431.13 542.973,2448.16 505.15,2454.18Z
+  id: 51
 - slug: three_towers
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 1
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Three Towers
     pt: Três Torres
@@ -1235,12 +1286,13 @@ map_areas:
     517.989,2519.2 498.332,2507.56C495.047,2491.75 495.935,2474.41 502.924,2454.84C472.278,2454.73
     444.236,2457.13 421.34,2464.48C411.88,2482.59 395.117,2494.43 373.355,2501.99C376.004,2536.65
     357.355,2560.79 307.578,2569.53Z
+  id: 52
 - slug: the_arbor
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 1
-  house_sigil:
+  house_sigil: 
   names:
     en: The Arbor
     pt: O Arbusto
@@ -1248,12 +1300,13 @@ map_areas:
     237.036,2813.1 245.239,2809.39C253.817,2801.5 252.08,2795.21 248.869,2789.15C237.355,2789.84
     228.789,2779.74 223.171,2758.86L205.202,2761.83C197.132,2756.21 197.147,2748.24
     198.317,2739.93C187.589,2725.09 177.808,2714.86 174.645,2737Z
+  id: 53
 - slug: starfall
   type: Land
   fortification_type: castle
   barrels_count: 1
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Starfall
     pt: Queda de Estrela
@@ -1266,12 +1319,13 @@ map_areas:
     769.949,2725.78 768.045,2701.47C767.044,2688.7 767.273,2685.83 763.602,2684.18C750.943,2693.42
     739.607,2690.2 729.594,2674.54C704.63,2655.26 629.467,2703.01 651.303,2627.7C610.639,2622.78
     569.006,2624.5 525.957,2635.94Z
+  id: 54
 - slug: yronwood
   type: Land
   fortification_type: castle
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Yronwood
     pt: Yronwood
@@ -1285,12 +1339,13 @@ map_areas:
     891.834,2575.46 885.48,2571.13C863.562,2577.51 849.065,2573.08 837.941,2563.73C828.911,2570.7
     819.309,2573.57 808.451,2567.41C802.228,2569.83 793.91,2569.34 783.496,2565.93C771.795,2575.38
     766.02,2573.29 766.17,2559.66Z
+  id: 55
 - slug: salt_shore
   type: Land
-  fortification_type:
+  fortification_type: 
   barrels_count: 1
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Salt Shore
     pt: Costa de Sal
@@ -1303,6 +1358,7 @@ map_areas:
     1104.46,2681.78 1076.67,2675.3C1062.54,2664.71 1047.36,2660.51 1030.64,2665.65C985.191,2665.21
     958.772,2653.95 938.436,2639.23L858.592,2686.99L825.027,2671.17C809.398,2682.24
     793.952,2685.74 778.908,2672.56Z
+  id: 56
 - slug: sunspear
   type: Land
   fortification_type: stronghold
@@ -1321,15 +1377,17 @@ map_areas:
     1227.99,2589.29 1213.43,2592.37C1201.67,2609.18 1186.27,2616.09 1167.24,2613.11C1159.2,2622.29
     1151.29,2626 1143.65,2617.68C1120.7,2617.38 1102.05,2608.37 1084.77,2596.57C1059.54,2617.36
     1035.39,2617.91 1012.81,2588.91C994.868,2592.81 976.968,2591.31 959.105,2584.41Z
+  id: 57
 - slug: port_of_sunspear
   type: Port
-  fortification_type:
+  fortification_type: 
   barrels_count: 0
   crowns_count: 0
-  house_sigil:
+  house_sigil: 
   names:
     en: Port of Sunspear
     pt: Porto de Lançasolar
   path: M1337.11,2613.88C1369.42,2613.88 1395.61,2640.08 1395.61,2672.39C1395.61,2704.7
     1369.42,2730.9 1337.11,2730.9C1304.79,2730.9 1278.6,2704.7 1278.6,2672.39C1278.6,2640.08
     1304.79,2613.88 1337.11,2613.88Z
+  id: 58

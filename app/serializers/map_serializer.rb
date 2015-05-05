@@ -1,4 +1,4 @@
 class MapSerializer < ActiveModel::Serializer
-  attributes :id
+  attributes :id, :territories
   has_many :map_areas
 end
