@@ -17,9 +17,23 @@ class Board < ActiveRecord::Base
   validates :match, presence: true
 
   def territories
-    file_path = 'config/game_data/map_areas.yml'
-    @fixtures ||= YAML.load_file(File.join(Rails.root, file_path))
-    @fixtures['map_areas']
+    @territories ||= fetch_territories
+  end
+
+  private
+
+  def fetch_territories
+    map_file_path = 'config/game_data/map_areas.yml'
+    map = YAML.load_file(File.join(Rails.root, map_file_path))
+    map.with_indifferent_access['map_areas'].map do |territory_data|
+      territory = Territory.new(self)
+      territory.assign_attributes(
+        id: territory_data[:id],
+        slug: territory_data[:slug],
+        path: territory_data[:path],
+      )
+      territory
+    end
   end
 
 end

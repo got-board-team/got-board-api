@@ -1,0 +1,2 @@
+class Footman < Unit
+end

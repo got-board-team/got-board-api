@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150410013234) do
+ActiveRecord::Schema.define(version: 20150507223329) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -83,4 +83,21 @@ ActiveRecord::Schema.define(version: 20150410013234) do
   add_index "tracks", ["board_id"], name: "index_tracks_on_board_id", using: :btree
   add_index "tracks", ["match_id"], name: "index_tracks_on_match_id", using: :btree
 
+  create_table "units", force: :cascade do |t|
+    t.integer  "board_id"
+    t.integer  "player_id"
+    t.string   "type"
+    t.string   "territory"
+    t.integer  "x"
+    t.integer  "y"
+    t.boolean  "routed"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "units", ["board_id"], name: "index_units_on_board_id", using: :btree
+  add_index "units", ["player_id"], name: "index_units_on_player_id", using: :btree
+
+  add_foreign_key "units", "boards"
+  add_foreign_key "units", "players"
 end

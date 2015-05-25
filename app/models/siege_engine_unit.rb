@@ -1,2 +1,0 @@
-class SiegeEngineUnit
-end

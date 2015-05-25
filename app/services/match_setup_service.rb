@@ -5,8 +5,9 @@ class MatchSetupService
     def create!(number_of_players: 6, use_tides_of_battle_cards: false)
       ActiveRecord::Base.transaction do
         match = create_match
+        Board.create!(match: match)
         players = create_players(match, number_of_players)
-        world = create_world(match, players, use_tides_of_battle_cards)
+        #world = create_world(match, players, use_tides_of_battle_cards)
         match
       end
     end
@@ -30,10 +31,16 @@ class MatchSetupService
       players << Player.create!(match: match, house: 'Baratheon')
       players << Player.create!(match: match, house: 'Lannister')
       players << Player.create!(match: match, house: 'Stark')
-      players << Player.create!(match: match, house: 'Greyjoy') if number_of_players >= 4
+      players << create_greyjoy_player(match) if number_of_players >= 4
       players << Player.create!(match: match, house: 'Tyrell')  if number_of_players >= 5
       players << Player.create!(match: match, house: 'Martell') if number_of_players == 6
       players
+    end
+
+    def create_greyjoy_player(match)
+      player = Player.create!(match: match, house: 'Greyjoy')
+      Knight.create!(player: player, board: match.board, territory: "pyke")
+      player
     end
 
     # TODO spec
@@ -47,20 +54,8 @@ class MatchSetupService
     # TODO spec
     def create_board(match, players)
       board = Board.create!(match: match)
-      create_map(match, board, players)
       create_tracks(match, board, players)
       board
-    end
-
-    # TODO spec
-    def create_map(match, board, players)
-      # The King’s Court Overlay Balances the availability of Special Order
-      # tokens in three and four players games (Rulebook, pages 3 and 28).
-      use_overlay = players.size <= 4
-      map = Map.create!(board: board, match: match,
-        use_kings_court_overlay: use_overlay)
-      map.create_all_areas!
-      true
     end
 
     # TODO spec

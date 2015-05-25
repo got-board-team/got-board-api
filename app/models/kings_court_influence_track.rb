@@ -1,5 +1,9 @@
 class KingsCourtInfluenceTrack < InfluenceTrack
 
+  # The King’s Court Overlay Balances the availability of Special Order
+  # tokens in three and four players games (Rulebook, pages 3 and 28).
+  validates :use_kings_court_overlay, inclusion: { in: [true, false] }
+
   private
 
   # called after object initialization (on new records only)

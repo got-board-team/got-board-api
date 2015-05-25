@@ -6,6 +6,7 @@ class Player < ActiveRecord::Base
 
   belongs_to :match
 
+  has_many :units
   # has_many :house_cards
   # has_many :available_house_cards,
   #   -> { where status: 'available' }, class_name: 'HouseCard'

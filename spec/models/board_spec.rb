@@ -1,5 +1,10 @@
 require 'rails_helper'
 
-RSpec.describe Board, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Board, type: :model do
+  describe "#territories" do
+    it "returns 58 territories" do
+      expect(subject.territories.count).to eq 58
+      expect(subject.territories.map(&:class).uniq.first).to eq Territory
+    end
+  end
 end

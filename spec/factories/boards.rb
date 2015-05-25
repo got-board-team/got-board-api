@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :board do
-    match_id 1
+    association :match
   end
 
 end

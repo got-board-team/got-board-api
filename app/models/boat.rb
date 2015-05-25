@@ -1,0 +1,2 @@
+class Boat < Unit
+end
