@@ -2,7 +2,7 @@ class Territory
   include ActiveModel::SerializerSupport
   include ActiveRecord::AttributeAssignment
 
-  attr_reader :board, :units
+  attr_reader :board
   attr_accessor :id, :slug, :path
 
   def initialize(board)

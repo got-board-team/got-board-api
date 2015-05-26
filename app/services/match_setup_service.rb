@@ -6,8 +6,7 @@ class MatchSetupService
       ActiveRecord::Base.transaction do
         match = create_match
         Board.create!(match: match)
-        players = create_players(match, number_of_players)
-        #world = create_world(match, players, use_tides_of_battle_cards)
+        create_players(match, number_of_players)
         match
       end
     end
@@ -39,7 +38,8 @@ class MatchSetupService
 
     def create_greyjoy_player(match)
       player = Player.create!(match: match, house: 'Greyjoy')
-      Knight.create!(player: player, board: match.board, territory: "pyke")
+      Knight.create!(player: player, board: match.board, territory: "pyke", x: 245, y: 1495)
+      #Footman in Pyke x: 304 , y: 1468
       player
     end
 
