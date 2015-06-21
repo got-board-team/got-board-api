@@ -16,6 +16,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Brings convention over configuration to your JSON generation
 # Read more: https://github.com/rails-api/active_model_serializers
 gem 'active_model_serializers', '~> 0.9.3'
+gem 'pusher', '~> 0.14.5'
+
   #git: 'https://github.com/rails-api/active_model_serializers.git',
   #tag: 'v0.10.0.rc1'
 # Use ActiveModel has_secure_password
