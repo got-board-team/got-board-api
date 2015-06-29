@@ -1,5 +1,8 @@
 require 'rails_helper'
 
-RSpec.describe Unit, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Unit, type: :model do
+  it do
+    expect(subject).to validate_inclusion_of(:type).
+      in_array %w(Footman Knight Boat SiegeEngine)
+  end
 end
