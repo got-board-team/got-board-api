@@ -17,6 +17,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Read more: https://github.com/rails-api/active_model_serializers
 gem 'active_model_serializers', '~> 0.9.3'
 gem 'pusher', '~> 0.14.5'
+# Middleware that will make Rack-based apps CORS compatible
+gem 'rack-cors', '~> 0.4.0'
 
   #git: 'https://github.com/rails-api/active_model_serializers.git',
   #tag: 'v0.10.0.rc1'
