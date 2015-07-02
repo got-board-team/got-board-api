@@ -5,4 +5,6 @@ class Unit < ActiveRecord::Base
   scope :by_territory, -> (slug) { where(territory: slug) }
 
   validates_inclusion_of :type, in: %w(Footman Knight Boat SiegeEngine)
+
+  pusherable :unit
 end

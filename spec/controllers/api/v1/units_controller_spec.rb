@@ -2,10 +2,14 @@ require 'rails_helper'
 
 describe Api::V1::UnitsController, type: :controller do
 
+  let(:valid_params) do
+    { unit: { board_id: 1, type: "Footman", house: "martell", x: 10, y: 20 } }
+  end
+
   describe "POST 'create' " do
     context "with valid attributes" do
       it "returns success" do
-        post :create, { type: "footman", house: "martell", x: 10, y: 20 }
+        post :create, valid_params
         expect(response).to be_success
       end
     end

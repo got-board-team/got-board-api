@@ -16,9 +16,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Brings convention over configuration to your JSON generation
 # Read more: https://github.com/rails-api/active_model_serializers
 gem 'active_model_serializers', '~> 0.9.3'
-gem 'pusher', '~> 0.14.5'
 # Middleware that will make Rack-based apps CORS compatible
 gem 'rack-cors', '~> 0.4.0'
+# Adds callback hooks for your ActiveModel models for sending messages
+# to a Pusher channel
+gem 'pusherable', '~> 1.3.0'
 
   #git: 'https://github.com/rails-api/active_model_serializers.git',
   #tag: 'v0.10.0.rc1'
