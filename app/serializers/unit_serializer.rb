@@ -8,4 +8,8 @@ class UnitSerializer < ActiveModel::Serializer
   def house
     object.player.house.downcase
   end
+
+  def territory_id
+    object.territory.id
+  end
 end

@@ -4,7 +4,7 @@ ruby '2.2.2'
 
 gem 'dotenv-rails', '2.0.1'
 
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.3'
 # Use postgresql as the database for Active Record
 gem 'pg', '0.18.1'
 # Use Uglifier as compressor for JavaScript assets
