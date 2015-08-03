@@ -1,2 +1,2 @@
-class SiegeEngine
+class SiegeEngine < Unit
 end

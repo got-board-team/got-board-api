@@ -7,6 +7,11 @@ class Player < ActiveRecord::Base
   belongs_to :match
 
   has_many :units
+  has_many :footmans
+  has_many :boats
+  has_many :knights
+  has_many :siege_engines
+
   # has_many :house_cards
   # has_many :available_house_cards,
   #   -> { where status: 'available' }, class_name: 'HouseCard'
