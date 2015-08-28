@@ -39,6 +39,7 @@ build/
 /.bundle
 /lib/bundler/man/
 vendor/bundle
+vendor/ruby
 
 # Ignore all logfiles and tempfiles.
 /log/*
@@ -48,3 +49,5 @@ vendor/bundle
 # Ignore environments files.
 .env
 .envrc
+
+.rake_t_cache
