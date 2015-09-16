@@ -14,6 +14,13 @@ class Api::V1::UnitsController < ApplicationController
     render json: { unit: unit.attributes }
   end
 
+  #TODO spec
+  def destroy
+    unit = Unit.find(params[:id])
+    unit.destroy
+    render json: { unit: unit.attributes }
+  end
+
   private
 
   def unit_params
