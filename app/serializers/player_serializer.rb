@@ -1,5 +1,6 @@
 class PlayerSerializer < ActiveModel::Serializer
-  attributes :id, :house, :units
+  attributes :id, :house
+  has_many :units
 
   def units
     object.units.without_territory.map do |unit|

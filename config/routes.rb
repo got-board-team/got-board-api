@@ -2,7 +2,8 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: 'json' } do
     namespace :v1 do
       resources :matches
-      resources :footmans, controller: :units
+      resources :units
+      resources :footmen, controller: :units
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
