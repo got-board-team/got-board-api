@@ -85,7 +85,10 @@ class MatchSetupService
 
     # TODO spec
     def create_power_pool(match)
-      # TODO
+      player = Player.where(match: match, house: 'Greyjoy').first!
+      March.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      MarchM.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      MarchP.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
     end
 
     # TODO spec

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150507223329) do
+ActiveRecord::Schema.define(version: 20151022001119) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,18 @@ ActiveRecord::Schema.define(version: 20150507223329) do
   add_index "maps", ["match_id"], name: "index_maps_on_match_id", using: :btree
 
   create_table "matches", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "order_tokens", force: :cascade do |t|
+    t.integer  "board_id"
+    t.integer  "player_id"
+    t.string   "type"
+    t.string   "territory"
+    t.integer  "x"
+    t.integer  "y"
+    t.boolean  "routed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

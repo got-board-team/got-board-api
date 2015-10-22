@@ -1,0 +1,2 @@
+class MarchM < OrderToken
+end
