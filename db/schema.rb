@@ -45,17 +45,6 @@ ActiveRecord::Schema.define(version: 20151022001119) do
   add_index "map_areas", ["match_id"], name: "index_map_areas_on_match_id", using: :btree
   add_index "map_areas", ["port_owner_id"], name: "index_map_areas_on_port_owner_id", using: :btree
 
-  create_table "maps", force: :cascade do |t|
-    t.integer  "match_id",                                null: false
-    t.integer  "board_id",                                null: false
-    t.boolean  "use_kings_court_overlay", default: false, null: false
-    t.datetime "created_at",                              null: false
-    t.datetime "updated_at",                              null: false
-  end
-
-  add_index "maps", ["board_id"], name: "index_maps_on_board_id", using: :btree
-  add_index "maps", ["match_id"], name: "index_maps_on_match_id", using: :btree
-
   create_table "matches", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
