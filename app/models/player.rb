@@ -11,6 +11,10 @@ class Player < ActiveRecord::Base
   has_many :boats
   has_many :knights
   has_many :siege_engines
+  has_many :order_tokens
+  has_many :marchs
+  has_many :march_ms
+  has_many :march_ps
 
   # has_many :house_cards
   # has_many :available_house_cards,
