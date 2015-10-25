@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151022001119) do
+ActiveRecord::Schema.define(version: 20151025165228) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,9 +57,9 @@ ActiveRecord::Schema.define(version: 20151022001119) do
     t.string   "territory"
     t.integer  "x"
     t.integer  "y"
-    t.boolean  "routed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "faceup",     default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   create_table "players", force: :cascade do |t|
@@ -91,9 +91,9 @@ ActiveRecord::Schema.define(version: 20151022001119) do
     t.string   "territory"
     t.integer  "x"
     t.integer  "y"
-    t.boolean  "routed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "routed",     default: false, null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
   end
 
   add_index "units", ["board_id"], name: "index_units_on_board_id", using: :btree
