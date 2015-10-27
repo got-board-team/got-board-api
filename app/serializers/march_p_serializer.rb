@@ -1,0 +1,1 @@
+class MarchPSerializer < OrderTokenSerializer; end
