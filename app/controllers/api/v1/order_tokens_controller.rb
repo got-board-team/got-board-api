@@ -26,10 +26,18 @@ class Api::V1::OrderTokensController < ApplicationController
     render json: { order_token: order_token.attributes }
   end
 
+  #TODO spec
+  def reveal
+    params.require(:player_id)
+    OrderToken.where(player_id: params[:player_id]).update_all(faceup: true)
+    Pusher.trigger('order_token', 'reveal', { player_id: params[:player_id]})
+    render json: {}
+  end
+
   private
 
   def update_params
-    params.require(:order_token).permit(:x, :y, :territory_id)
+    params.require(:order_token).permit(:territory_id, :x, :y, :faceup)
   end
 
   def create_params

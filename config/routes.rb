@@ -4,7 +4,11 @@ Rails.application.routes.draw do
       resources :matches
       resources :units
       resources :footmen, controller: :units
-      resources :order_tokens
+      resources :order_tokens do
+        collection do
+          get :reveal
+        end
+      end
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.
