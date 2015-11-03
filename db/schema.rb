@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151025165228) do
+ActiveRecord::Schema.define(version: 20151103100242) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -72,6 +72,19 @@ ActiveRecord::Schema.define(version: 20151025165228) do
   add_index "players", ["match_id", "house"], name: "index_players_on_match_id_and_house", unique: true, using: :btree
   add_index "players", ["match_id"], name: "index_players_on_match_id", using: :btree
 
+  create_table "power_tokens", force: :cascade do |t|
+    t.integer  "board_id"
+    t.integer  "player_id"
+    t.string   "territory"
+    t.integer  "x",          default: 0, null: false
+    t.integer  "y",          default: 0, null: false
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "power_tokens", ["board_id"], name: "index_power_tokens_on_board_id", using: :btree
+  add_index "power_tokens", ["player_id"], name: "index_power_tokens_on_player_id", using: :btree
+
   create_table "tracks", force: :cascade do |t|
     t.integer  "match_id",                null: false
     t.integer  "board_id",                null: false
@@ -99,6 +112,8 @@ ActiveRecord::Schema.define(version: 20151025165228) do
   add_index "units", ["board_id"], name: "index_units_on_board_id", using: :btree
   add_index "units", ["player_id"], name: "index_units_on_player_id", using: :btree
 
+  add_foreign_key "power_tokens", "boards"
+  add_foreign_key "power_tokens", "players"
   add_foreign_key "units", "boards"
   add_foreign_key "units", "players"
 end
