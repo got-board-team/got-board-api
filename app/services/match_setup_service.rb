@@ -89,6 +89,18 @@ class MatchSetupService
       March.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
       MarchM.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
       MarchP.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      ConsolidateP.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      Consolidate.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      Consolidate.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      Defend.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      Defend.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      DefendP.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      Raid.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      Raid.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      RaidP.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      Support.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      Support.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
+      SupportP.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
     end
 
     # TODO spec

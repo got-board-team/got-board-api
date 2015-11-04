@@ -1,4 +1,17 @@
 class OrderToken < ActiveRecord::Base
+
+  TOKEN_TYPES = [ "Consolidate",
+                  "ConsolidateP",
+                  "Defend",
+                  "DefendP",
+                  "March",
+                  "MarchM",
+                  "MarchP",
+                  "Raid",
+                  "RaidP",
+                  "Support",
+                  "SupportP" ]
+
   pusherable :order_token
 
   belongs_to :board
@@ -6,7 +19,7 @@ class OrderToken < ActiveRecord::Base
 
   attr_accessor :territory_id
 
-  validates_inclusion_of :type, in: %w(March MarchM MarchP Defend DefendP Support SupportP Raid RaidP ConsolidatePower ConsolidatePowerP)
+  validates_inclusion_of :type, in: TOKEN_TYPES
 
   scope :by_territory, -> (slug) { where(territory: slug) }
   scope :without_territory, -> { where(territory: nil) }

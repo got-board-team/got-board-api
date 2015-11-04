@@ -1,0 +1,1 @@
+class ConsolidateSerializer < OrderTokenSerializer; end

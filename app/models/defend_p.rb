@@ -1,0 +1,2 @@
+class DefendP < OrderToken
+end

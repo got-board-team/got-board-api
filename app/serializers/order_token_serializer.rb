@@ -8,4 +8,3 @@ class OrderTokenSerializer < ActiveModel::Serializer
     :y,
     :faceup
 end
-

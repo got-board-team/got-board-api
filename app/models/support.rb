@@ -1,0 +1,2 @@
+class Support < OrderToken
+end
