@@ -16,9 +16,15 @@ class Player < ActiveRecord::Base
   has_many :marchs
   has_many :march_ms
   has_many :march_ps
+  has_many :consolidates
+  has_many :consolidate_ps
+  has_many :defends
+  has_many :defend_ps
+  has_many :supports
+  has_many :support_ps
 
   has_many :power_tokens
-  
+
   # has_many :house_cards
   # has_many :available_house_cards,
   #   -> { where status: 'available' }, class_name: 'HouseCard'

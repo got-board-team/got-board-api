@@ -1,16 +1,5 @@
 class OrderToken < ActiveRecord::Base
-
-  TOKEN_TYPES = [ "Consolidate",
-                  "ConsolidateP",
-                  "Defend",
-                  "DefendP",
-                  "March",
-                  "MarchM",
-                  "MarchP",
-                  "Raid",
-                  "RaidP",
-                  "Support",
-                  "SupportP" ]
+  include RailsSTIModel
 
   pusherable :order_token
 
@@ -19,12 +8,17 @@ class OrderToken < ActiveRecord::Base
 
   attr_accessor :territory_id
 
-  validates_inclusion_of :type, in: TOKEN_TYPES
-
   scope :by_territory, -> (slug) { where(territory: slug) }
   scope :without_territory, -> { where(territory: nil) }
 
   def territory_id=(territory_slug)
     self.territory = territory_slug
+  end
+
+  def self.bulk_update(ids, attrs)
+    orders = where(id: ids)
+    orders.update_all(attrs)
+    orders.reload
+    Pusher.trigger('order_token', 'order_token.bulk_update', orders)
   end
 end

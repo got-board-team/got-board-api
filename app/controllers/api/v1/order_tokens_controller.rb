@@ -28,9 +28,8 @@ class Api::V1::OrderTokensController < ApplicationController
 
   #TODO spec
   def reveal
-    params.require(:player_id)
-    OrderToken.where(player_id: params[:player_id]).update_all(faceup: true)
-    Pusher.trigger('order_token', 'reveal', { player_id: params[:player_id]})
+    ids = params.require(:ids)
+    OrderToken.bulk_update(ids, faceup: true)
     render json: {}
   end
 
