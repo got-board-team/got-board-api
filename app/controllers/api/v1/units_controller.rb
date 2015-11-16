@@ -1,5 +1,4 @@
 class Api::V1::UnitsController < ApplicationController
-
   #TODO spec
   def create
     unit = Unit.new(create_params)
@@ -28,10 +27,6 @@ class Api::V1::UnitsController < ApplicationController
   end
 
   private
-
-  def unit_params
-    params.require(:unit).permit(:x, :y, :territory)
-  end
 
   def update_params
     params.require(:unit).permit(:x, :y, :territory_id)

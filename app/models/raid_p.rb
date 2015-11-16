@@ -1,0 +1,2 @@
+class RaidP < OrderToken
+end

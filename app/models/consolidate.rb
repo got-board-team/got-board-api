@@ -1,0 +1,2 @@
+class Consolidate < OrderToken
+end

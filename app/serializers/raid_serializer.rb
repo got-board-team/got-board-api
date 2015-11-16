@@ -1,0 +1,1 @@
+class RaidSerializer < OrderTokenSerializer; end

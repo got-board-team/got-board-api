@@ -3,7 +3,12 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :matches
       resources :units
-      resources :footmen, controller: :units
+      resources :order_tokens do
+        collection do
+          get :reveal
+        end
+      end
+      resources :power_tokens
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

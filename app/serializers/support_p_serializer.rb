@@ -1,0 +1,1 @@
+class SupportPSerializer < OrderTokenSerializer; end

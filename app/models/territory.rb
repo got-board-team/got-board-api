@@ -12,4 +12,12 @@ class Territory
   def units
     @board.units.by_territory(slug)
   end
+
+  def order_tokens
+    @board.order_tokens.by_territory(slug)
+  end
+
+  def power_tokens
+    @board.power_tokens.by_territory(slug)
+  end
 end

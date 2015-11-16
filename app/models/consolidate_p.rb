@@ -1,0 +1,2 @@
+class ConsolidateP < OrderToken
+end

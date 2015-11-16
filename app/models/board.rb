@@ -4,6 +4,8 @@ class Board < ActiveRecord::Base
   belongs_to :match
 
   has_many :units
+  has_many :order_tokens
+  has_many :power_tokens
   has_many :tracks
 
   has_one :wildlings_track              # single-token

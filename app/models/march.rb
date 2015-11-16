@@ -1,0 +1,2 @@
+class March < OrderToken
+end

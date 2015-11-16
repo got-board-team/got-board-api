@@ -1,0 +1,2 @@
+class SupportP < OrderToken
+end
