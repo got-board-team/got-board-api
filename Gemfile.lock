@@ -247,6 +247,3 @@ DEPENDENCIES
   spring-commands-rspec (~> 1.0)
   timecop (~> 0.7)
   uglifier (= 2.7.1)
-
-BUNDLED WITH
-   1.10.6
