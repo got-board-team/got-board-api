@@ -5,6 +5,7 @@ class Player < ActiveRecord::Base
   HOUSES = %w( Baratheon Lannister Stark Greyjoy Tyrell Martell )
 
   belongs_to :match
+  belongs_to :user
 
   has_many :units
   has_many :footmans
