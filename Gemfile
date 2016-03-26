@@ -22,6 +22,8 @@ gem 'rack-cors', '~> 0.4.0'
 # to a Pusher channel
 gem 'pusherable', '~> 1.3.0'
 
+gem 'active_interaction', '~> 3.0'
+
   #git: 'https://github.com/rails-api/active_model_serializers.git',
   #tag: 'v0.10.0.rc1'
 # Use ActiveModel has_secure_password

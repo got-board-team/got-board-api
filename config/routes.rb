@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
+
   namespace :api, defaults: { format: 'json' } do
     namespace :v1 do
+      resources :users do
+        collection do
+          post :authenticate
+        end
+      end
       resources :matches
       resources :units
       resources :order_tokens do

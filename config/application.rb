@@ -33,6 +33,8 @@ module GameOfThronesBoardGame
       'Access-Control-Request-Method' => '*'
     )
 
+    config.autoload_paths += Dir.glob("#{config.root}/app/interactions/*")
+
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
         origins '*'

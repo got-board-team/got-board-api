@@ -1,5 +1,5 @@
 class PlayerSerializer < ActiveModel::Serializer
-  attributes :id, :house
+  attributes :id, :house, :user_id
   has_many :units
   has_many :order_tokens
   has_many :power_tokens
@@ -14,6 +14,10 @@ class PlayerSerializer < ActiveModel::Serializer
 
   def power_tokens
     serialize_without_territory(PowerTokenSerializer, "power_token")
+  end
+
+  def user_id
+    object.user_id
   end
 
   private
