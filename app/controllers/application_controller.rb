@@ -3,15 +3,19 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :null_session
 
-  attr_accessor :current_user
-
   before_action :authenticate
+
+  def current_user
+    @current_user
+  end
 
   private
 
   def authenticate
     token = request.headers['authorization'].gsub('Bearer ', '')
-    current_user = User.find_by(token: token)
-    current_user.present?
+    @current_user = User.find_by(token: token)
+    fail if @current_user.blank?
+  rescue
+    head :unauthorized
   end
 end
