@@ -15,7 +15,7 @@ class Api::V1::UsersController < ApplicationController
     google_token_endpoint = URI('https://accounts.google.com/o/oauth2/token')
     @response = Net::HTTP.post_form(google_token_endpoint, data)
 
-    auth_hash = JSON.parse(@response.body)
+    auth_hash = JSON.parse(@response.body).with_indifferent_access
 
     google_user_info_endpoint = URI("https://www.googleapis.com/oauth2/v1/userinfo?alt=json&access_token=#{auth_hash['access_token']}")
 
@@ -24,8 +24,11 @@ class Api::V1::UsersController < ApplicationController
     outcome = AuthenticateUser.run( email: user_info[:email],
                                     first_name: user_info[:given_name],
                                     last_name: user_info[:family_name],
-                                    token: auth_hash['access_token'] )
+                                    token: auth_hash[:access_token] )
+    user = outcome.result
 
-    render json: auth_hash.slice('access_token', 'expires_in')
+    render json: auth_hash.
+      slice("access_token", "expires_in").
+      merge(user_id: user.id)
   end
 end

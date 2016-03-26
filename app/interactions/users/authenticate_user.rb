@@ -10,5 +10,6 @@ class AuthenticateUser < ActiveInteraction::Base
     user.last_name = last_name
     user.token = token
     user.save
+    user
   end
 end
