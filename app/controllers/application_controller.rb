@@ -12,10 +12,15 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate
-    token = request.headers['authorization'].gsub('Bearer ', '')
-    @current_user = User.find_by(token: token)
-    fail if @current_user.blank?
-  rescue
-    head :unauthorized
+    @current_user = User.find_by(token: request_token)
+    fail "Invalid Token" if @current_user.blank?
+  rescue => e
+    render json: { error: e.message }, status: :unauthorized
+  end
+
+  def request_token
+    authorization_header = request.headers["Authorization"]
+    fail "Missing Authorization Header" if authorization_header.blank?
+    authorization_header.gsub("Bearer ", "")
   end
 end
