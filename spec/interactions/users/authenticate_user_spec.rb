@@ -2,21 +2,26 @@ require 'rails_helper'
 
 describe AuthenticateUser, type: :interactions do
 
-  let!(:user) { FactoryGirl.create(:user) }
-
-  subject { UserService.authenticate!(user.email) }
-
-  it 'finds for a user' do
-    expect(User).to receive(:find_by).with({email: user.email})
-    expect(subject).to eq(user)
-  end
 
   context 'when user exists' do
-    it 'returns user'
+    let(:user) { create(:user) }
+
+    subject { described_class.run(user.attributes).result }
+
+    it 'finds for a user' do
+      is_expected.to eq(user)
+    end
   end
 
   context 'when user does not exists' do
-    it 'creates a new user'
+    let(:attrs) { { 'first_name' => 'John', 'last_name' => 'Doe', 'email' => 'johndoe@mail.com', 'token' => 'some' } }
+
+    subject { described_class.run(attrs).result }
+
+    it 'creates a new user with the given inputs' do
+      expect{ subject }.to change(User, :count).by(1)
+      expect(subject.attributes).to include(attrs)
+    end
   end
 
 end

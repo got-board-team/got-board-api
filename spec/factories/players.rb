@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :player do
-    match ""
-house "MyString"
+    association :match
+    house "Baratheon"
   end
 
 end

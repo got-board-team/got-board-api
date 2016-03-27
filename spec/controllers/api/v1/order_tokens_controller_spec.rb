@@ -1,6 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::OrderTokensController, type: :controller do
+  let(:user) { create(:user) }
+  before(:each) { api_sign_in(user) }
 
   let(:valid_params) do
     { id: 1, order_token: { territory: "winterfell", x: 10, y: 20 } }
