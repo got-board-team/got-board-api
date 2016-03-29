@@ -5,6 +5,8 @@ class AuthenticateUser < ActiveInteraction::Base
   string :token
 
   def execute
-    User.find_by(email: email) || User.create(inputs)
+    user = User.find_or_initialize_by(email: email)
+    user.update(inputs)
+    user
   end
 end
