@@ -1,9 +1,14 @@
 require 'rails_helper'
 
 describe Api::V1::UnitsController, type: :controller do
+  let(:board) { create(:board) }
+  let(:player) { create(:player) }
+
+  let(:user) { create(:user) }
+  before(:each) { api_sign_in(user) }
 
   let(:valid_params) do
-    { unit: { board_id: 1, type: "Footman", house: "martell", x: 10, y: 20 } }
+    { unit: { board_id: board.id, player_id: player.id, type: "Footman", house: "martell", x: 10, y: 20 } }
   end
 
   describe "POST 'create' " do
@@ -16,7 +21,7 @@ describe Api::V1::UnitsController, type: :controller do
 
     context "with invalid attributes" do
       it "returns an error" do
-        post :create, { type: "soldier", house: "karstark", x: 10, y: 20 }
+        post :create, unit: { type: "Soldier", house: "karstark", x: 10, y: 20 }
         expect(response).to be_bad_request
       end
     end

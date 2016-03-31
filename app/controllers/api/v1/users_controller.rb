@@ -2,6 +2,7 @@ class Api::V1::UsersController < ApplicationController
   GOOGLE_KEY = '866943291177-90h4ribrqase40q5udthhceobgntkhlv.apps.googleusercontent.com'
   GOOGLE_SECRET = 'TNY5c1NyWvGf432VoYspOa8u'
 
+  # TODO: test
   def authenticate
     data = {
       client_id: GOOGLE_KEY,
