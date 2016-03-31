@@ -1,7 +1,8 @@
 class Api::V1::MatchesController < ApplicationController
 
   def index
-    matches = Match.by_players(current_user.players)
+    #matches = Match.by_players(current_user.players)
+    matches = Match.all
     render json: { matches: matches.serialize_with(MatchesSerializer) }
   end
 
