@@ -1,9 +1,13 @@
 class Api::V1::UnitsController < ApplicationController
-  #TODO spec
+  #TODO spec and refactor
   def create
-    unit = Unit.new(create_params)
-    unit.save!
-    render json: { unit: unit.attributes }
+    begin
+      unit = Unit.new(create_params)
+      unit.save!
+      render json: { unit: unit.attributes }
+    rescue Exception => e
+      render json: { error: "#{e.class}: #{e}" }, status: :bad_request
+    end
   end
 
   #TODO spec

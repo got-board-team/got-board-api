@@ -1,17 +1,28 @@
-## README
+# GOT Board
 
-This README would normally document whatever steps are necessary to get the application up and running.
+## Setup
 
-Things you may want to cover:
+1. Have installed Ruby, Bundler and Postgresql
 
-* Ruby version
-* System dependencies
-* Configuration
-* Database creation
-* Database initialization
-* How to run the test suite
-* Services (job queues, cache servers, search engines, etc.)
-* Deployment instructions
-* ...
+2. Copy the .env file
 
-Please feel free to use a different markup language if you do not plan to run <tt>rake doc:app</tt>.
+``` bash
+cp .env.example .env
+```
+
+Change the the variables with your values.
+
+3. Install the gems and setup the database
+
+``` bash
+bundle install
+bundle exec rake db:setup
+```
+
+## Development
+
+To run the tests
+
+``` bash
+bundle exec rake spec
+```
