@@ -27,19 +27,68 @@ class MatchSetupService
       # 6 players: Baratheon Lannister Stark Greyjoy Tyrell Martell
       # (Rulebook, page 28)
       players = []
-      players << Player.create!(match: match, house: 'Baratheon')
-      players << Player.create!(match: match, house: 'Lannister')
-      players << Player.create!(match: match, house: 'Stark')
+      players << create_baratheon_player(match)
+      players << create_lannister_player(match)
+      players << create_stark_player(match)
       players << create_greyjoy_player(match) if number_of_players >= 4
-      players << Player.create!(match: match, house: 'Tyrell')  if number_of_players >= 5
-      players << Player.create!(match: match, house: 'Martell') if number_of_players == 6
+      players << create_tyrell_player(match)  if number_of_players >= 5
+      players << create_martell_player(match) if number_of_players == 6
       players
     end
 
     def create_greyjoy_player(match)
       player = Player.create!(match: match, house: 'Greyjoy')
-      Knight.create!(player: player, board: match.board, territory: "pyke", x: 245, y: 1495)
-      #Footman in Pyke x: 304 , y: 1468
+      Boat.create!(player: player, board: match.board, territory: "ironmans_bay", x: 87, y: 1557)
+      Boat.create!(player: player, board: match.board, territory: "port_of_pyke", x: 325, y: 1350)
+      Knight.create!(player: player, board: match.board, territory: "pyke", x: 198, y: 1472)
+      Footman.create!(player: player, board: match.board, territory: "pyke", x: 281, y: 1479)
+      Footman.create!(player: player, board: match.board, territory: "greywater_watch", x: 458, y: 1164)
+      player
+    end
+
+    def create_baratheon_player(match)
+      player = Player.create!(match: match, house: 'Baratheon')
+      Boat.create!(player: player, board: match.board, territory: "shipbreaker_bay", x: 1262, y: 1985)
+      Boat.create!(player: player, board: match.board, territory: "shipbreaker_bay", x: 1372, y: 2138)
+      Knight.create!(player: player, board: match.board, territory: "dragonstone", x: 1392, y: 1797)
+      Footman.create!(player: player, board: match.board, territory: "dragonstone", x: 1295, y: 1804)
+      Footman.create!(player: player, board: match.board, territory: "kingswood", x: 1098, y: 2000)
+      player
+    end
+
+    def create_stark_player(match)
+      player = Player.create!(match: match, house: 'Stark')
+      Boat.create!(player: player, board: match.board, territory: "the_shivering_sea", x: 1208, y: 738)
+      Knight.create!(player: player, board: match.board, territory: "winterfell", x: 625, y: 851)
+      Footman.create!(player: player, board: match.board, territory: "winterfell", x: 773, y: 544)
+      Footman.create!(player: player, board: match.board, territory: "white_harbor", x: 852, y: 810)
+      player
+    end
+
+    def create_lannister_player(match)
+      player = Player.create!(match: match, house: 'Lannister')
+      Boat.create!(player: player, board: match.board, territory: "the_golden_sound", x: 133, y: 1759)
+      Knight.create!(player: player, board: match.board, territory: "lannisport", x: 328, y: 1826)
+      Footman.create!(player: player, board: match.board, territory: "lannisport", x: 348, y: 1690)
+      Footman.create!(player: player, board: match.board, territory: "stoney_sept", x: 852, y: 810)
+      player
+    end
+
+    def create_tyrell_player(match)
+      player = Player.create!(match: match, house: 'Tyrell')
+      Boat.create!(player: player, board: match.board, territory: "redwyne_straights", x: 77, y: 2504)
+      Knight.create!(player: player, board: match.board, territory: "highgarden", x: 389, y: 2171)
+      Footman.create!(player: player, board: match.board, territory: "highgarden", x: 406, y: 2262)
+      Footman.create!(player: player, board: match.board, territory: "dornish_marches", x: 498, y: 2308)
+      player
+    end
+
+    def create_martell_player(match)
+      player = Player.create!(match: match, house: 'Martell')
+      Boat.create!(player: player, board: match.board, territory: "sea_of_dorne", x: 1121, y: 2475)
+      Knight.create!(player: player, board: match.board, territory: "sunspear", x: 1010, y: 2600)
+      Footman.create!(player: player, board: match.board, territory: "sunspear", x: 1107, y: 2611)
+      Footman.create!(player: player, board: match.board, territory: "salt_shore", x: 814, y: 2698)
       player
     end
 
