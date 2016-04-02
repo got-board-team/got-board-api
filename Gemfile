@@ -20,7 +20,8 @@ gem 'active_model_serializers', '~> 0.9.4'
 gem 'rack-cors', '~> 0.4.0'
 # Adds callback hooks for your ActiveModel models for sending messages
 # to a Pusher channel
-gem 'pusherable', '~> 1.3.0'
+#gem 'pusherable', '~> 1.3.0'
+gem 'pusherable', git: "git@github.com:tonycoco/pusherable.git"
 
 gem 'active_interaction', '~> 3.0'
 
