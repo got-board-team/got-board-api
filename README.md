@@ -1,4 +1,5 @@
 # GOT Board
+[![Build Status](https://semaphoreci.com/api/v1/leandrost/got-board-api/branches/master/shields_badge.svg)](https://semaphoreci.com/leandrost/got-board-api)
 
 ## Setup
 
