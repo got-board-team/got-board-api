@@ -66,4 +66,5 @@ group :test do
   gem 'shoulda-matchers', '~> 3.1'
   gem 'simplecov', '~> 0.11', require: false
   gem 'codeclimate-test-reporter', '~> 0.5', require: false
+  gem 'codacy-coverage', :require => false
 end
