@@ -1,5 +1,10 @@
 # GOT Board
 [![Build Status](https://semaphoreci.com/api/v1/leandrost/got-board-api/branches/master/shields_badge.svg)](https://semaphoreci.com/leandrost/got-board-api)
+[![Code Climate](https://codeclimate.com/github/got-board-team/got-board-api/badges/gpa.svg)](https://codeclimate.com/github/got-board-team/got-board-api)
+[![Codacy Badge](https://api.codacy.com/project/badge/grade/4ccfa0e779cb4da081c3103ef7651105)](https://www.codacy.com/app/leandrosthimoteo_2996/got-board-api)
+[![Codacy Badge](https://api.codacy.com/project/badge/coverage/4ccfa0e779cb4da081c3103ef7651105)](https://www.codacy.com/app/leandrosthimoteo_2996/got-board-api)
+
+
 
 ## Setup
 
