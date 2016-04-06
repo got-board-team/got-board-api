@@ -70,7 +70,7 @@ class MatchSetupService
       Boat.create!(player: player, board: match.board, territory: "the_golden_sound", x: 133, y: 1759)
       Knight.create!(player: player, board: match.board, territory: "lannisport", x: 328, y: 1826)
       Footman.create!(player: player, board: match.board, territory: "lannisport", x: 348, y: 1690)
-      Footman.create!(player: player, board: match.board, territory: "stoney_sept", x: 852, y: 810)
+      Footman.create!(player: player, board: match.board, territory: "stoney_sept", x: 476, y: 1820)
       player
     end
 
