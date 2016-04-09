@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
-gem 'dotenv-rails', '2.0.1'
+gem 'dotenv-rails', '2.1.1'
 
 gem 'rails', '4.2.6'
 # Use postgresql as the database for Active Record
@@ -45,7 +45,7 @@ group :development, :test do
   gem 'spring-commands-rspec', '~> 1.0'
   gem 'awesome_print', '~> 1.6'
   gem 'rspec-rails', '~> 3.4'
-  gem 'factory_girl_rails', '~> 4.6'
+  gem 'factory_girl_rails', '~> 4.7'
   gem 'database_cleaner', '~> 1.5'
   gem 'pry-byebug', '~> 3.3'
   gem 'pry-remote', '~> 0.1'

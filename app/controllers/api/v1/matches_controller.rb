@@ -7,8 +7,9 @@ class Api::V1::MatchesController < ApplicationController
   end
 
   def create
-    match = MatchSetupService.create!(number_of_players: match_params[:players_count].to_i)
-    render json: match, include: [:players]
+    payload = params.require(:match).permit(:players_count)
+    outcome = CreateMatch.run(payload)
+    render json: outcome.result, include: [:players]
   end
 
   #TODO spec
@@ -17,9 +18,4 @@ class Api::V1::MatchesController < ApplicationController
     render json: match, include: [:players]
   end
 
-  private
-
-  def match_params
-    params.require(:match).permit(:players_count)
-  end
 end
