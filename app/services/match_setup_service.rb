@@ -5,8 +5,11 @@ class MatchSetupService
     def create!(number_of_players: 6, use_tides_of_battle_cards: false)
       ActiveRecord::Base.transaction do
         match = create_match
-        Board.create!(match: match)
+        create_board(match)
         create_players(match, number_of_players)
+        create_power_pool(match)
+        distribute_player_things(match)
+        #create_decks(match, use_tides_of_battle_cards)
         match
       end
     end
@@ -93,17 +96,9 @@ class MatchSetupService
     end
 
     # TODO spec
-    def create_world(match, players, use_tides_of_battle_cards)
-      create_board(match, players)
-      create_decks(match, use_tides_of_battle_cards)
-      create_power_pool(match)
-      distribute_player_things(match, players)
-    end
-
-    # TODO spec
-    def create_board(match, players)
+    def create_board(match)
       board = Board.create!(match: match)
-      create_tracks(match, board, players)
+      #create_tracks(match, board, players)
       board
     end
 
@@ -134,27 +129,38 @@ class MatchSetupService
 
     # TODO spec
     def create_power_pool(match)
-      player = Player.where(match: match, house: 'Greyjoy').first!
-      March.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      MarchM.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      MarchP.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      ConsolidateP.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      Consolidate.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      Consolidate.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      Defend.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      Defend.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      DefendP.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      Raid.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      Raid.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      RaidP.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      Support.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      Support.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
-      SupportP.create!(player: player, board: match.board, territory: nil, x: 0, y: 0)
     end
 
     # TODO spec
-    def distribute_player_things(match, players)
-      # TODO
+    def distribute_player_things(match)
+      match.players.each do |player|
+        create_orders(player, match.board)
+        create_power_tokens(player)
+      end
+    end
+
+    def create_orders(player, board)
+      March.create!(player: player, board: board)
+      MarchM.create!(player: player, board: board)
+      MarchP.create!(player: player, board: board)
+      ConsolidateP.create!(player: player, board: board)
+      Consolidate.create!(player: player, board: board)
+      Consolidate.create!(player: player, board: board)
+      Defend.create!(player: player, board: board)
+      Defend.create!(player: player, board: board)
+      DefendP.create!(player: player, board: board)
+      Raid.create!(player: player, board: board)
+      Raid.create!(player: player, board: board)
+      RaidP.create!(player: player, board: board)
+      Support.create!(player: player, board: board)
+      Support.create!(player: player, board: board)
+      SupportP.create!(player: player, board: board)
+    end
+
+    def create_power_tokens(player)
+      5.times do
+        PowerToken.create!(player: player)
+      end
     end
 
   end
