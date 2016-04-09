@@ -136,7 +136,6 @@ class MatchSetupService
       match.players.each do |player|
         create_orders(player, match.board)
         create_power_tokens(player)
-        create_power_tokens(player)
         send("create_#{player.house.downcase}_cards", player)
       end
     end
