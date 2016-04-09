@@ -136,6 +136,8 @@ class MatchSetupService
       match.players.each do |player|
         create_orders(player, match.board)
         create_power_tokens(player)
+        create_power_tokens(player)
+        send("create_#{player.house.downcase}_cards", player)
       end
     end
 
@@ -161,6 +163,31 @@ class MatchSetupService
       5.times do
         PowerToken.create!(player: player)
       end
+    end
+
+    def create_baratheon_cards(player)
+    end
+
+    def create_lannister_cards(player)
+    end
+
+    def create_stark_cards(player)
+      HouseCard.create!(name: "Eddard Stark", player: player)
+      HouseCard.create!(name: "Robb Stark", player: player)
+      HouseCard.create!(name: "Roose Bolton", player: player)
+      HouseCard.create!(name: "Greatjon Umber", player: player)
+      HouseCard.create!(name: "The Blackfish", player: player)
+      HouseCard.create!(name: "Ser Rodrick Cassel", player: player)
+      HouseCard.create!(name: "Catelyn Stark", player: player)
+    end
+
+    def create_greyjoy_cards(player)
+    end
+
+    def create_tyrell_cards(player)
+    end
+
+    def create_martell_cards(player)
     end
 
   end

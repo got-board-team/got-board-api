@@ -27,7 +27,9 @@ class Player < ActiveRecord::Base
 
   has_many :power_tokens
 
-  # has_many :house_cards
+  has_many :house_cards
+
+  alias_method :cards, :house_cards
   # has_many :available_house_cards,
   #   -> { where status: 'available' }, class_name: 'HouseCard'
   # has_many :discarded_house_cards,

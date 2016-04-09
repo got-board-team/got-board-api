@@ -3,6 +3,7 @@ class PlayerSerializer < ActiveModel::Serializer
   has_many :units
   has_many :order_tokens
   has_many :power_tokens
+  has_many :house_cards
 
   def units
     serialize_without_territory(UnitSerializer, "unit")
@@ -14,6 +15,12 @@ class PlayerSerializer < ActiveModel::Serializer
 
   def power_tokens
     serialize_without_territory(PowerTokenSerializer, "power_token")
+  end
+
+  def house_cards
+    object.cards do |card|
+      HouseCardSerializer.new(card).as_json["HouseCard"]
+    end
   end
 
   def user_id
