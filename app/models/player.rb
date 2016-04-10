@@ -3,13 +3,14 @@ class Player < ActiveRecord::Base
 
   # the order is important! DO NOT CHANGE!
   # it is used elsewhere, like in VictoryTrack.setup! for example
+  # (Rulebook, page 28)
   HOUSES = %w( Baratheon Lannister Stark Greyjoy Tyrell Martell )
 
   belongs_to :match
   belongs_to :user
 
   has_many :units
-  has_many :footmans
+  has_many :footmen
   has_many :boats
   has_many :knights
   has_many :siege_engines
