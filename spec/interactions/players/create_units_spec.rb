@@ -1,11 +1,29 @@
 require "rails_helper"
 
-describe CreateStartingUnits, type: :interactions do
-  let(:ships_areas) { subject.boats.map(&:territory) }
-  let(:knights_areas) { subject.knights.map(&:territory) }
-  let(:footmen_areas) { subject.footmen.map(&:territory) }
+describe CreateUnits, type: :interactions do
+  let(:ships_areas) { subject.boats.map(&:territory).compact }
+  let(:knights_areas) { subject.knights.map(&:territory).compact }
+  let(:footmen_areas) { subject.footmen.map(&:territory).compact }
 
   subject { described_class.run!(player: player) }
+
+  shared_examples "creating all units" do
+    it "creates a total of 10 Footmen" do
+      expect(subject.footmen.count).to eq 10
+    end
+
+    it "creates a total of 5 Knights" do
+      expect(subject.knights.count).to eq 5
+    end
+
+    it "creates a total of 6 Ships" do
+      expect(subject.boats.count).to eq 6
+    end
+
+    it "creates a total of 2 SiegeEngines" do
+      expect(subject.siege_engines.count).to eq 2
+    end
+  end
 
   context "with House of Baratheon" do
     let(:player) { create(:player, :baratheon) }
@@ -21,6 +39,8 @@ describe CreateStartingUnits, type: :interactions do
     it "creates 2 Footmen each in Dragonstone and Kingswood" do
       expect(footmen_areas).to match_array %w(dragonstone kingswood)
     end
+
+    it_behaves_like "creating all units"
   end
 
   context "with House of Lannister" do
@@ -37,6 +57,8 @@ describe CreateStartingUnits, type: :interactions do
     it "creates 2 Footmen each in Lannisport and Stoney Sept" do
       expect(footmen_areas).to match_array %w(lannisport stoney_sept)
     end
+
+    it_behaves_like "creating all units"
   end
 
   context "with House of Stark" do
@@ -53,6 +75,8 @@ describe CreateStartingUnits, type: :interactions do
     it "creates 2 Footmen each in Winterfell and White Harbor" do
       expect(footmen_areas).to match_array %w(winterfell white_harbor)
     end
+
+    it_behaves_like "creating all units"
   end
 
   context "with House of Greyjoy" do
@@ -69,6 +93,8 @@ describe CreateStartingUnits, type: :interactions do
     it "creates 2 Footman each in Pyke and Greywater Watch" do
       expect(footmen_areas).to match_array %w(pyke greywater_watch)
     end
+
+    it_behaves_like "creating all units"
   end
 
   context "with House of Tyrell" do
@@ -85,6 +111,8 @@ describe CreateStartingUnits, type: :interactions do
     it "creates 2 Footmen each in Highgarden and Dornish Marches" do
       expect(footmen_areas).to match_array %w(highgarden dornish_marches)
     end
+
+    it_behaves_like "creating all units"
   end
 
   context "with House of Martell" do
@@ -101,5 +129,7 @@ describe CreateStartingUnits, type: :interactions do
     it "creates 2 Footmen each in Sunspear and Salt Shore" do
       expect(footmen_areas).to match_array %w(sunspear salt_shore)
     end
+
+    it_behaves_like "creating all units"
   end
 end

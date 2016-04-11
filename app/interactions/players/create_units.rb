@@ -1,12 +1,37 @@
-class CreateStartingUnits < ActiveInteraction::Base
+class CreateUnits < ActiveInteraction::Base
   object :player
 
   def execute
+    create_staring_units
+    create_off_board_units
+    player
+  end
+
+  private
+
+  # Rulebook page 2
+  TOTAL_FOOTMEN_UNITS = 10
+  TOTAL_KNIGTHS_UNITS = 5
+  TOTAL_SHIPS_UNITS = 6
+  TOTAL_SIEGE_ENGINES_UNITS = 2
+
+  def create_staring_units
     STARTING_UNITS[player.house].each do |attributes|
       attributes[:board] = player.match.board
       player.units.create!(attributes)
     end
-    player
+  end
+
+  def create_off_board_units
+    create_remaining_units(player.footmen, TOTAL_FOOTMEN_UNITS)
+    create_remaining_units(player.knights, TOTAL_KNIGTHS_UNITS)
+    create_remaining_units(player.boats, TOTAL_SHIPS_UNITS)
+    create_remaining_units(player.siege_engines, TOTAL_SIEGE_ENGINES_UNITS)
+  end
+
+  def create_remaining_units(units, total)
+    count = total - units.count
+    count.times { units.create!(board: player.match.board) }
   end
 
   STARTING_UNITS = {
