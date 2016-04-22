@@ -32,8 +32,8 @@ class CreateMatch < ActiveInteraction::Base
   end
 
   def distribute_player_things(player, board)
-    create_orders(player, board)
     create_power_tokens(player)
+    compose(CreateOrders, player: player)
     compose(CreateUnits, player: player)
     compose(CreateHouseCards, player: player)
   end
@@ -62,24 +62,6 @@ class CreateMatch < ActiveInteraction::Base
   end
 
   def create_power_pool(match)
-  end
-
-  def create_orders(player, board)
-    March.create!(player: player, board: board)
-    MarchM.create!(player: player, board: board)
-    MarchP.create!(player: player, board: board)
-    ConsolidateP.create!(player: player, board: board)
-    Consolidate.create!(player: player, board: board)
-    Consolidate.create!(player: player, board: board)
-    Defend.create!(player: player, board: board)
-    Defend.create!(player: player, board: board)
-    DefendP.create!(player: player, board: board)
-    Raid.create!(player: player, board: board)
-    Raid.create!(player: player, board: board)
-    RaidP.create!(player: player, board: board)
-    Support.create!(player: player, board: board)
-    Support.create!(player: player, board: board)
-    SupportP.create!(player: player, board: board)
   end
 
   def create_power_tokens(player)
