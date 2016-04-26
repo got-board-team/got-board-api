@@ -10,7 +10,7 @@ class Api::V1::UsersController < ApplicationController
       grant_type: "authorization_code",
       code: params[:authorizationCode],
       scope: 'email profile',
-      redirect_uri: 'http://localhost:4200/oauth2callback'
+      redirect_uri: ENV["OAUTH_CALLBACK_URI"]
     }
 
     google_token_endpoint = URI('https://accounts.google.com/o/oauth2/token')
