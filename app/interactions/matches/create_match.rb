@@ -10,6 +10,7 @@ class CreateMatch < ActiveInteraction::Base
       match = Match.create!
       match.create_board!
       create_players(match, number_of_players)
+      create_tracks(match, match.board, match.players)
       # create_power_pool(match)
       # create_decks(match, use_tides_of_battle_cards)
       match
