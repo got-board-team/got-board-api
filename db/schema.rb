@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160426234619) do
+ActiveRecord::Schema.define(version: 20160427231225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -76,15 +76,23 @@ ActiveRecord::Schema.define(version: 20160426234619) do
   end
 
   create_table "players", force: :cascade do |t|
-    t.integer  "match_id",   null: false
-    t.string   "house",      null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "match_id",         null: false
+    t.string   "house",            null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "user_id"
+    t.integer  "supply_position"
+    t.integer  "victory_position"
+    t.integer  "throne_position"
+    t.integer  "blade_position"
+    t.integer  "raven_position"
   end
 
+  add_index "players", ["blade_position", "match_id"], name: "index_players_on_blade_position_and_match_id", unique: true, using: :btree
   add_index "players", ["match_id", "house"], name: "index_players_on_match_id_and_house", unique: true, using: :btree
   add_index "players", ["match_id"], name: "index_players_on_match_id", using: :btree
+  add_index "players", ["raven_position", "match_id"], name: "index_players_on_raven_position_and_match_id", unique: true, using: :btree
+  add_index "players", ["throne_position", "match_id"], name: "index_players_on_throne_position_and_match_id", unique: true, using: :btree
 
   create_table "power_tokens", force: :cascade do |t|
     t.integer  "board_id"

@@ -1,5 +1,5 @@
 class PlayerSerializer < ActiveModel::Serializer
-  attributes :id, :house, :user_id
+  attributes :id, :house, :user_id, :supply_position, :victory_position, :throne_position, :blade_position, :raven_position
   has_many :units
   has_many :order_tokens
   has_many :power_tokens
