@@ -6,13 +6,12 @@ class Api::V1::PlayersController < ApplicationController
   end
 
   def update
-    ap params
     @player.update_attributes(player_params)
     render json: @player
   end
 
   def player_params
-    params.require(:player).permit(:user_id)
+    params.require(:player).permit(:user_id, :supply_position, :victory_position)
   end
 
   private
