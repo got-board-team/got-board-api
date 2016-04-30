@@ -17,6 +17,7 @@ class CreateHouseCards < ActiveInteraction::Base
     ],
     Lannister: [
       { name: "cersei" },
+      { name: "kevan" },
       { name: "tyrion" },
       { name: "hound" },
       { name: "jaime" },

@@ -63,7 +63,7 @@ describe CreateMatch, type: :interactions do
     end
 
     shared_examples :setup_default_positions do
-      let(:match) { ap 0; described_class.run!(number_of_players: 6) }
+      let(:match) { described_class.run!(number_of_players: 6) }
 
       subject do
         match.players.find_by_house(house)
