@@ -1,0 +1,55 @@
+baratheon:
+  tracks_positions:
+    throne: 1
+    blade: 5
+    raven: 4
+    supply: 2
+    victory: 1
+  #starting_units:
+  #house_cars::
+lannister:
+  tracks_positions:
+    throne: 2
+    blade: 6
+    raven: 1
+    supply: 2
+    victory: 1
+  #starting_units:
+  #house_cars::
+stark:
+  tracks_positions:
+    throne: 3
+    blade: 4
+    raven: 2
+    supply: 1
+    victory: 2
+  #starting_units:
+  #house_cars::
+greyjoy:
+  tracks_positions:
+    throne: 5
+    blade: 1
+    raven: 6
+    supply: 2
+    victory: 1
+  #starting_units:
+  #house_cars::
+tyrell:
+  tracks_positions:
+    throne: 6
+    blade: 2
+    raven: 5
+    supply: 2
+    victory: 1
+  #starting_units:
+  #house_cars::
+martell:
+  tracks_positions:
+    throne: 4
+    blade: 3
+    raven: 3
+    supply: 2
+    victory: 1
+  #starting_units:
+  #house_cars::
+
