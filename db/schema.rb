@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160427231225) do
+ActiveRecord::Schema.define(version: 20160524235332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,9 +58,12 @@ ActiveRecord::Schema.define(version: 20160427231225) do
   add_index "map_areas", ["port_owner_id"], name: "index_map_areas_on_port_owner_id", using: :btree
 
   create_table "matches", force: :cascade do |t|
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.integer  "round",      default: 1, null: false
+    t.datetime "created_at",                                                                                      null: false
+    t.datetime "updated_at",                                                                                      null: false
+    t.integer  "round",             default: 1,                                                                   null: false
+    t.string   "iron_throne_track", default: ["baratheon", "lannister", "stark", "greyjoy", "tyrell", "martell"],              array: true
+    t.string   "fiefdoms_track",    default: ["baratheon", "lannister", "stark", "greyjoy", "martell", "tyrell"],              array: true
+    t.string   "kings_court_track", default: ["lannister", "baratheon", "stark", "greyjoy", "tyrell", "martell"],              array: true
   end
 
   create_table "order_tokens", force: :cascade do |t|
