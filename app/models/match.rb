@@ -1,5 +1,7 @@
 class Match < ActiveRecord::Base
 
+  pusherable :match
+
   has_many :players
   has_one :board
   # has_many :decks
