@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160409024329) do
+ActiveRecord::Schema.define(version: 20160524235332) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,8 +58,12 @@ ActiveRecord::Schema.define(version: 20160409024329) do
   add_index "map_areas", ["port_owner_id"], name: "index_map_areas_on_port_owner_id", using: :btree
 
   create_table "matches", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                                                                                      null: false
+    t.datetime "updated_at",                                                                                      null: false
+    t.integer  "round",             default: 1,                                                                   null: false
+    t.string   "iron_throne_track", default: ["baratheon", "lannister", "stark", "greyjoy", "tyrell", "martell"],              array: true
+    t.string   "fiefdoms_track",    default: ["baratheon", "lannister", "stark", "greyjoy", "martell", "tyrell"],              array: true
+    t.string   "kings_court_track", default: ["lannister", "baratheon", "stark", "greyjoy", "tyrell", "martell"],              array: true
   end
 
   create_table "order_tokens", force: :cascade do |t|
@@ -75,15 +79,23 @@ ActiveRecord::Schema.define(version: 20160409024329) do
   end
 
   create_table "players", force: :cascade do |t|
-    t.integer  "match_id",   null: false
-    t.string   "house",      null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.integer  "match_id",         null: false
+    t.string   "house",            null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
     t.integer  "user_id"
+    t.integer  "supply_position"
+    t.integer  "victory_position"
+    t.integer  "throne_position"
+    t.integer  "blade_position"
+    t.integer  "raven_position"
   end
 
+  add_index "players", ["blade_position", "match_id"], name: "index_players_on_blade_position_and_match_id", unique: true, using: :btree
   add_index "players", ["match_id", "house"], name: "index_players_on_match_id_and_house", unique: true, using: :btree
   add_index "players", ["match_id"], name: "index_players_on_match_id", using: :btree
+  add_index "players", ["raven_position", "match_id"], name: "index_players_on_raven_position_and_match_id", unique: true, using: :btree
+  add_index "players", ["throne_position", "match_id"], name: "index_players_on_throne_position_and_match_id", unique: true, using: :btree
 
   create_table "power_tokens", force: :cascade do |t|
     t.integer  "board_id"

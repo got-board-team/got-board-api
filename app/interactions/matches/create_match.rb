@@ -10,7 +10,6 @@ class CreateMatch < ActiveInteraction::Base
       match = Match.create!
       match.create_board!
       create_players(match, number_of_players)
-      # create_power_pool(match)
       # create_decks(match, use_tides_of_battle_cards)
       match
     end
@@ -26,30 +25,34 @@ class CreateMatch < ActiveInteraction::Base
   def create_players(match, number_of_players)
     house_names = Player::HOUSES.first(number_of_players)
     house_names.each do |house_name|
-      player = match.players.create!(match: match, house: house_name)
-      distribute_player_things(player, match.board)
+      player = match.players.build(match: match, house: house_name)
+      setup_tracks(player)
+      player.save!
+      distribute_player_things(player)
     end
   end
 
-  def distribute_player_things(player, board)
+  def distribute_player_things(player)
     create_power_tokens(player)
     compose(CreateOrders, player: player)
     compose(CreateUnits, player: player)
     compose(CreateHouseCards, player: player)
   end
 
-  def create_tracks(match, board, players)
-    [
-      WildlingsTrack,
-      VictoryTrack,
-      # SupplyTrack,               # TODO
-      # RoundTrack,                # TODO
-      # KingsCourtInfluenceTrack,  # TODO
-      # IronThroneInfluenceTrack,  # TODO
-      # FiefdomsInfluenceTrack     # TODO
-    ].each do |track|
-      track.setup!(match, board, players)
+  def setup_tracks(player)
+    house = player.house.downcase
+    houses_setup.with_indifferent_access[house][:tracks_positions].map do |marker, position|
+      player.send("#{marker}_position=", position)
     end
+  end
+
+  def houses_setup
+    @houses_setup ||= load_houses_setup
+  end
+
+  def load_houses_setup
+    file_path = "config/game_data/houses_setup.yml"
+    YAML.load_file(File.join(Rails.root, file_path))
   end
 
   def create_decks(match, use_tides_of_battle_cards)
@@ -59,9 +62,6 @@ class CreateMatch < ActiveInteraction::Base
     # create_westeros_deck_three(match)
     # create_wildlings_deck(match)
     # create_tides_of_battle_deck(match) if use_tides_of_battle_cards
-  end
-
-  def create_power_pool(match)
   end
 
   def create_power_tokens(player)

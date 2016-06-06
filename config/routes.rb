@@ -15,7 +15,7 @@ Rails.application.routes.draw do
         end
       end
       resources :power_tokens
-      resources :players, only: :update
+      resources :players, only: [:show, :update]
     end
   end
   # The priority is based upon order of creation: first created -> highest priority.

@@ -12,6 +12,13 @@ class Api::V1::MatchesController < ApplicationController
     render json: outcome.result, include: [:players]
   end
 
+  def update
+    payload = params.require(:match).permit(:round, :iron_throne_track, :fiefdoms_track, :kings_court_track)
+    match = Match.find(params[:id])
+    match.update_attributes(payload)
+    render json: match
+  end
+
   # TODO spec
   def show
     match = Match.find(params[:id])
