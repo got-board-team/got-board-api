@@ -11,11 +11,16 @@ class CreateMatch < ActiveInteraction::Base
       match.create_board!
       create_players(match, number_of_players)
       # create_decks(match, use_tides_of_battle_cards)
+      create_garrisons(match)
       match
     end
   end
 
   private
+
+  def create_garrisons(match)
+    compose(CreateGarrisons, match: match)
+  end
 
   # 3 players: Baratheon Lannister Stark
   # 4 players: Baratheon Lannister Stark Greyjoy
