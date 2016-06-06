@@ -4,6 +4,7 @@ class Match < ActiveRecord::Base
 
   has_many :players
   has_one :board
+  has_many :garrisons
   # has_many :decks
   # has_one :wildlings_deck
   # has_one :westeros_one_deck
