@@ -2,8 +2,8 @@ class CreateGarrisons < ActiveInteraction::Base
   object :match
 
   def execute
-    GARRISONS_SETUP.keys.each do |garrison|
-      Garrison.create!(match: match, territory_id: load_territory(garrison).id, name: garrison, x: GARRISONS_SETUP[garrison][:x], y: GARRISONS_SETUP[garrison][:y])
+    GARRISONS_SETUP.keys.each do |garrison_name|
+      Garrison.create!(match: match, territory: garrison_name, name: garrison_name, x: GARRISONS_SETUP[garrison_name][:x], y: GARRISONS_SETUP[garrison_name][:y])
     end
   end
 

@@ -29,14 +29,14 @@ ActiveRecord::Schema.define(version: 20160606222125) do
   create_table "garrisons", force: :cascade do |t|
     t.string   "name"
     t.integer  "match_id"
-    t.integer  "territory_id"
+    t.string   "territory"
     t.integer  "x"
     t.integer  "y"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
-  add_index "garrisons", ["match_id", "territory_id"], name: "index_garrisons_on_match_id_and_territory_id", using: :btree
+  add_index "garrisons", ["match_id"], name: "index_garrisons_on_match_id", using: :btree
 
   create_table "house_cards", force: :cascade do |t|
     t.string   "name",                         null: false
